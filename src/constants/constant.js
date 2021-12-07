@@ -10,7 +10,8 @@ export const getNetworkChainId = () => {
     const { REACT_APP_BUILD_MODE } = process.env;
 
     if (REACT_APP_BUILD_MODE === "production") {
-        return NETWORK.MAIN;
+        // return NETWORK.MAIN;
+        return NETWORK.RINKEBY; // we are checking in rinkeby network now: temp
     }
     return NETWORK.RINKEBY;
 };
