@@ -106,8 +106,10 @@ export const StartNft =
 export const Paused =
     (contract) => async (dispatch) => {
         try {
+            console.log('contract', contract);
             const web3 = await getWeb3();
             const Contract = new web3.eth.Contract(contract.abi, contract.address);
+            console.log('web3', web3, Contract);
             await Contract.methods.paused()
                 .call()
                 .then((data) => {
