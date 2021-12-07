@@ -87,12 +87,14 @@ export const StartNft =
             await Contract.methods.startDate()
                 .call()
                 .then((data) => {
+                    console.log('data', data);
                     dispatch({
                         type: START,
                         payload: data,
                     });
                 })
                 .catch((error) => {
+                    console.log('error', error);
                     return error;
                 });
         } catch (error) {
@@ -109,12 +111,14 @@ export const Paused =
             await Contract.methods.paused()
                 .call()
                 .then((data) => {
+                    console.log('data-pause', data);
                     dispatch({
                         type: PAUSE,
                         payload: data,
                     });
                 })
                 .catch((error) => {
+                    console.log('error-pause', error);
                     return error;
                 });
         } catch (error) {

@@ -24,6 +24,7 @@ console.log('isPaused', isPaused);
     const dispatch = useDispatch();
 
     useEffect(() => {
+        console.log('aaa');
         dispatch(StartNft(nftContract));
         dispatch(Paused(nftContract));
     }, [dispatch]);
