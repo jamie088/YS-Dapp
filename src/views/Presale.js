@@ -1,16 +1,37 @@
-import React, { useState } from 'react';
-import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 import { MintNFT, Burn, Approve } from "../actions";
 import { nftContract, tokenContract } from '../contracts/contract';
 
 const Presale = () => {
     const dispatch = useDispatch();
+    const isMintNFT = useSelector((state) => state.mintNFT.mintNFT);
+    const isBurn = useSelector((state) => state.mintNFT.burn);
+
     const [amount, setAmount] = useState();
     const [eth, setEth] = useState();
     const [tokenId, setTokenId] = useState();
     const [loadingMint, setloadingMint] = useState(false);
     const [loadingBurn, setloadingBurn] = useState(false);
     const [loadingApprove, setloadingApprove] = useState(false);
+
+    useEffect(() => {
+        if (isMintNFT) {
+            toast.success("Success");
+        } else if (isMintNFT === false) {
+            toast.error("Failed...");
+        }
+    }, [isMintNFT]);
+
+    useEffect(() => {
+        if (isBurn) {
+            toast.success("Success");
+        } else if (isBurn === false) {
+            toast.error("Failed...");
+        }
+    }, [isBurn]);
+
     const handleChangeAmount = (e) => {
         setAmount(e.target.value);
     };

@@ -6,8 +6,8 @@ import {
 } from '../actions/types';
 
 const initialState = {
-    mintNFT: false,
-    burn: false,
+    mintNFT: null,
+    burn: null,
     start: false,
     pause: false
 };
@@ -17,12 +17,12 @@ export default function (state = initialState, action) {
     case MINT_NFT:
         return {
             ...state,
-            mintNFT: action.payload.success,
+            mintNFT: action.payload,
         };
     case BURN:
         return {
             ...state,
-            burn: action.payload.success,
+            burn: action.payload,
         };
     case START:
         return {

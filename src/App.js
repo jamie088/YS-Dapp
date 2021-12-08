@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import {
     BrowserRouter as Router
 } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
@@ -14,17 +16,16 @@ import EmailPage from './views/EmailPage';
 import WhiteList from './views/WhiteList';
 import { StartNft, Paused } from "./actions";
 import { nftContract } from './contracts/contract';
+import MovieVideo from './views/MovieVideo';
 
 const App = () => {
     const isStarted = useSelector((state) => state.mintNFT.start);
     const isPaused = useSelector((state) => state.mintNFT.pause);
     // const [ended, isEnded] = useState(false);
-console.log('isStarted', isStarted);
-console.log('isPaused', isPaused);
+
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log('aaa');
         dispatch(StartNft(nftContract));
         dispatch(Paused(nftContract));
     }, [dispatch]);
@@ -57,11 +58,13 @@ console.log('isPaused', isPaused);
                     </div>
                     <Home />
                     {/* <Discord /> */}
+                    <MovieVideo />
                     <Antara />
                     {(!isStarted || isPaused) && <WhiteList />}
                     {isStarted && !isPaused && <Presale />}
                     <EmailPage />
-                    {/* <Footer /> */}
+                    <Footer />
+                    <ToastContainer />
                 </div>
             </Router>
         </div>

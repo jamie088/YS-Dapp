@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React, {Component} from 'react';
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 // const EmailPage = () => {
 class EmailPage extends Component{
@@ -19,11 +20,11 @@ class EmailPage extends Component{
             .then(
                 (result) => {
                     console.log(result.text);
-                    window.alert('Subscribing was successful. Please check your email');
+                    toast.success("Subscribing was successful. Please check your email");
                 },
                 (error) => {
                     console.log(error.text);
-                    window.alert(`Subscribing was failed: ${error.text}`);
+                    toast.error(`Subscribing was failed: ${error.text}`);
                 }
             );
         e.target.reset();

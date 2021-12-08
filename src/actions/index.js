@@ -23,7 +23,10 @@ export const MintNFT =
             });
         } catch (error) {
             console.log('error', error);
-            window.alert('There was an error!');
+            dispatch({
+                type: MINT_NFT,
+                payload: false,
+            });
         }
     };
 
@@ -75,7 +78,10 @@ export const Burn =
             });
         } catch (error) {
             console.log('error', error);
-            window.alert('There was an error!');
+            dispatch({
+                type: BURN,
+                payload: false,
+            });
         }
     };
 
@@ -87,7 +93,6 @@ export const StartNft =
             await Contract.methods.startDate()
                 .call()
                 .then((data) => {
-                    console.log('data', data);
                     dispatch({
                         type: START,
                         payload: data,
@@ -99,21 +104,19 @@ export const StartNft =
                 });
         } catch (error) {
             console.log('error', error);
-            window.alert('There was an error!');
+            return error;
         }
     };
 
 export const Paused =
     (contract) => async (dispatch) => {
         try {
-            console.log('contract', contract);
             const web3 = await getWeb3();
             const Contract = new web3.eth.Contract(contract.abi, contract.address);
-            console.log('web3', web3, Contract);
+
             await Contract.methods.paused()
                 .call()
                 .then((data) => {
-                    console.log('data-pause', data);
                     dispatch({
                         type: PAUSE,
                         payload: data,
@@ -125,6 +128,6 @@ export const Paused =
                 });
         } catch (error) {
             console.log('error', error);
-            window.alert('There was an error!');
+            return error;
         }
     };

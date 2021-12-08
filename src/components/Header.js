@@ -1,11 +1,9 @@
 import React from 'react';
+import logo from '../images/WEBSITE-HEADER_BLACK-p-1080.png';
 
 const Header = () => {
     return (
-        // eslint-disable-next-line jsx-a11y/anchor-is-valid
-        <a href="#" className="brand w-nav-brand">
-            <h1 className="heading"><strong><em className="italic-text">ARABIAN CAMELS</em></strong></h1>
-        </a>
+        <img src={logo} loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 991px) 584.515625px, (max-width: 1279px) 88vw, 876.765625px"  alt="" className="image-9" />
     );
 };
 

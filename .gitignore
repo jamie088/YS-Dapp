@@ -60,3 +60,5 @@ package-lock.json
 yarn.lock
 /build
 /.vscode
+/config
+/cypress
