@@ -32,9 +32,9 @@ const Footer = () => {
                 <div className="demo-4---footer-links-contain">
                     <div className="demo-4---footer-link-wrap">
                         <a href="#section-1" className="demo-4---footer-link">Home</a>
-                        <a href="#Sizzle" className="demo-4---footer-link">Antara</a>
-                        <a href="#Antara" className="demo-4---footer-link">Sizzle</a>
-                        <a href="privacy-policy.html" className="demo-4---footer-link">Privacy Policy</a>
+                        <a href="#Antara" className="demo-4---footer-link">Antara</a>
+                        <a href="#Sizzle" className="demo-4---footer-link">Sizzle</a>
+                        <a href="../privacy-policy.html" className="demo-4---footer-link">Privacy Policy</a>
                     </div>
                     <div className="footer-social-wrap demo-4">
                         <a href="https://discord.gg/bcY9thmKy4" target="_blank" className="social-media-link demo-4 w-inline-block" rel="noreferrer"><img src={Discord2} width="20" alt="" className="image-3"/></a>
