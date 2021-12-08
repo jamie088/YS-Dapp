@@ -14,18 +14,18 @@ const Footer = () => {
                         <h2 className="style-2---h2 white-text">Contact</h2>
                         <div className="demo-4---contact-title">Enquiries</div>
                         <div className="demo-4---contact-wrap"><img src={MapIcon} loading="lazy" width="24" alt="" className="contact-icon"/>
-                            <a href="#" className="demo-4---contact-link">For Media and Press Enquiries – press@arabiancamels.io</a>
+                            <a className="demo-4---contact-link">For Media and Press Enquiries – press@arabiancamels.io</a>
                         </div>
                         <div className="demo-4---contact-wrap"><img src={MapIcon} loading="lazy" width="24" alt="" className="contact-icon"/>
-                            <a href="#" className="demo-4---contact-link">For Collaborations and Partnerships – collabs@arabiancamels.io</a>
+                            <a className="demo-4---contact-link">For Collaborations and Partnerships – collabs@arabiancamels.io</a>
                         </div>
                         <div className="_40px-height-div"></div>
                         <div className="demo-4---contact-title">Contact Us</div>
                         <div className="demo-4---contact-wrap"><img src={MapIcon} loading="lazy" width="24" alt="" className="contact-icon"/>
-                            <a href="#" className="demo-4---contact-link">Please write to us at info@arabiancamels.io</a>
+                            <a className="demo-4---contact-link">Please write to us at info@arabiancamels.io</a>
                         </div>
                         <div className="demo-4---contact-wrap"><img src={Discord} loading="lazy" width="24" alt="" className="contact-icon"/>
-                            <a href="#" className="demo-4---contact-link">or hit us up on the Discord</a>
+                            <a className="demo-4---contact-link">or hit us up on the Discord</a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ const Footer = () => {
                         <a href="#section-1" className="demo-4---footer-link">Home</a>
                         <a href="#Antara" className="demo-4---footer-link">Antara</a>
                         <a href="#Sizzle" className="demo-4---footer-link">Sizzle</a>
-                        <a href="../privacy-policy.html" className="demo-4---footer-link">Privacy Policy</a>
+                        {/* <a href="../privacy-policy.html" className="demo-4---footer-link">Privacy Policy</a> */}
                     </div>
                     <div className="footer-social-wrap demo-4">
                         <a href="https://discord.gg/bcY9thmKy4" target="_blank" className="social-media-link demo-4 w-inline-block" rel="noreferrer"><img src={Discord2} width="20" alt="" className="image-3"/></a>

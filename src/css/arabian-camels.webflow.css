@@ -851,6 +851,29 @@ textarea.w-input,textarea.w-select {
 }
 
 @media screen and (max-width: 479px) {
+    .bg-image {
+        position: static;
+        left: 100px;
+        bottom: -125px;
+        z-index: 1;
+        width: 0 !important;
+        height: 0 !important;
+        margin-right: 0;
+        margin-left: 0;
+        clear: both;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 auto;
+        -ms-flex: 0 auto;
+        flex: 0 auto;
+      }
   .w-container {
       max-width:none
   }
@@ -1341,6 +1364,30 @@ textarea.w-input,textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
+    .bg-image {
+        position: static;
+        left: 100px;
+        bottom: -125px;
+        z-index: 1;
+        width: 0 !important;
+        height: 0 !important;
+        margin-right: 0;
+        margin-left: 0;
+        clear: both;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 auto;
+        -ms-flex: 0 auto;
+        flex: 0 auto;
+      }
+
   .w-nav-brand {
       padding-left:10px
   }
@@ -2655,7 +2702,7 @@ blockquote {
 
 .button.movie {
   width: 250px;
-  margin-bottom: 220px;
+  /* margin-bottom: 220px; */
 }
 
 ._40px-height-div {
@@ -4928,7 +4975,7 @@ blockquote {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin-top: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -15070,7 +15117,7 @@ blockquote {
 
   .container.footer {
     margin-top: 10px;
-    margin-bottom: 220px;
+    /* margin-bottom: 220px; */
     margin-left: auto;
     padding-bottom: 60px;
   }
@@ -15597,7 +15644,7 @@ blockquote {
     height: 100vh;
     max-height: 100vh;
     margin-bottom: 140px;
-    padding-top: 0px;
+    padding-top: 10px;
     padding-bottom: 140px;
     background-image: url("https://uploads-ssl.webflow.com/61a006aa4d4109ece6043c1a/61a8708b98d7a17597bdaa00_web%20background%20(2).png");
     background-position: 50% 50%;
@@ -16456,7 +16503,7 @@ blockquote {
 
   .demo-4---copyrights-wrap {
     margin-top: auto;
-    margin-bottom: 140px;
+    /* margin-bottom: 140px; */
     padding-top: 10px;
   }
 
