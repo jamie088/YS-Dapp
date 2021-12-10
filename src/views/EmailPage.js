@@ -12,10 +12,10 @@ class EmailPage extends Component{
 
         emailjs
             .sendForm(
-                "service_88lph8i", // process.env.EMAILJS_SERVICE_ID,
-                "template_m9bwnil", // process.env.EMAILJS_TEMPLATE_ID,
+                "service_8lyyhe9", // process.env.EMAILJS_SERVICE_ID,
+                "template_xzq4udf", // process.env.EMAILJS_TEMPLATE_ID,
                 e.target,
-                "user_OozT18gmaXguY3xNjD4AD", // process.env.EMAILJS_USER_ID
+                "user_MLvqbPBCXZepDVYse9qUb", // process.env.EMAILJS_USER_ID
             )
             .then(
                 (result) => {
