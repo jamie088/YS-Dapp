@@ -4921,7 +4921,7 @@ blockquote {
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 6%;
+  padding: 0;
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
@@ -10006,9 +10006,15 @@ blockquote {
   position: relative;
   overflow: scroll;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 14.9vh);
   -o-object-fit: fill;
   object-fit: fill;
+}
+
+@media screen and (max-width: 991px) {
+  .scroll-snap-wrapper {
+    height: 100vh;
+  }
 }
 
 .html-embed-2 {
@@ -15655,14 +15661,14 @@ blockquote {
 
   .section---light.demo-4---footer.section-4 {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh;
     max-height: 100vh;
     margin-bottom: 140px;
     padding-top: 10px;
     padding-bottom: 140px;
     background-image: url("https://uploads-ssl.webflow.com/61a006aa4d4109ece6043c1a/61a8708b98d7a17597bdaa00_web%20background%20(2).png");
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: cover; */
   }
 
   .section---light.demo-2---bitcoin-section {

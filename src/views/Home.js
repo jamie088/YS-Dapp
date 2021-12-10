@@ -2,7 +2,7 @@ import React from 'react';
 import slider1 from '../images/slider-img.png';
 
 // eslint-disable-next-line react/prop-types
-const Home = ({ isPresale }) => {
+const Home = ({ isPresale = true }) => {
     return (
         <section id="Home" className="section---light demo-4---home-hero wf-section">
             {!isPresale && <a href="https://mgu9490eyrw.typeform.com/to/ouxOMiDB" target="_blank" className="button movie w-button" rel="noopener noreferrer">

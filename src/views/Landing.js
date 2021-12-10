@@ -26,8 +26,10 @@ const Landing = () => {
 
     useEffect(() => {
         const currentTime = new Date().getTime()/1000;
-        if (isStarted && !isPaused && currentTime < isStarted + 259200) {
+        if (isStarted && !isPaused && currentTime < Number(isStarted) + Number(259200)) {
             setIsPresale(true);
+        } else {
+            setIsPresale(false);
         }
     }, [isStarted, isPaused]);
 
