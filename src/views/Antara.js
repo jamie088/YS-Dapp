@@ -6,6 +6,7 @@ const Antara = () => {
             id="Antara"
             className="section---light movie nftform wf-section"
         >
+            <h1 id="Antara" className="style-2---h1 antara">SIZZLE&nbsp;REEL</h1>
             <div className="container yt">
                 <div
                     style={{paddingTop:"56.17021276595745%"}}

@@ -29,7 +29,11 @@ const App = () => {
                             </div>
                         </div>
                     </div>
-                    <Landing/>
+                    <div className="scroll-snap-wrapper">
+                        <div className="html-embed-2 w-embed">
+                        </div>
+                        <Landing/>
+                    </div>
                 </div>
             </Router>
         </div>

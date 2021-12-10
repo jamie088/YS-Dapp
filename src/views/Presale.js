@@ -95,7 +95,7 @@ const Presale = () => {
     };
 
     return (
-        <section id="Presale" className="" style={{marginBottom: "50px"}}>
+        <section id="Presale" className="" style={{marginTop: "50px"}}>
             <div className="mint-container">
                 <div className="mint-sub-container">
                     <input className="input-default" min="0" step="0.01" type="number" value={eth} onChange={handleChangeEth} placeholder='Eth amount'/>
