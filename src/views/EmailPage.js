@@ -39,7 +39,7 @@ class EmailPage extends Component{
                     type="email"
                     name="email"
                     placeholder="Enter your email here..."
-                    style={{minWidth: "365px"}}
+                    style={{minWidth: "325px"}}
                 />
                 <input type="submit" value="Subscribe" className="button w-button" style={{margin: "10px"}}/>
             </form>
