@@ -20,7 +20,7 @@ class EmailPage extends Component{
             .then(
                 (result) => {
                     console.log(result.text);
-                    toast.success("Subscribing was successful. Please check your email");
+                    toast.success("Subscribing was successful.");
                 },
                 (error) => {
                     console.log(error.text);
