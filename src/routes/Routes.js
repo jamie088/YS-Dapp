@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 

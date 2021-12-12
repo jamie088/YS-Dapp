@@ -5,7 +5,7 @@ const Privacy = async(() => import("../views/Privacy"));
 const menuRoutes = [
     {
         path: '/privacy',
-        component: Privacy
+        component: Privacy,
     }
 ];
 

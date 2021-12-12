@@ -7,7 +7,6 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 
 const Layout = ({ children, bg }) => {
-    console.log('children', children);
     return (
         <div className="sub-body">
             <Router>

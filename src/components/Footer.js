@@ -10,10 +10,10 @@ const Footer = () => {
             <div className="container footer container-footer">
                 <div className="demo-4---footer-links-contain">
                     <div className="demo-4---footer-link-wrap">
-                        <a href="#section-1" className="demo-4---footer-link">Home</a>
-                        <a href="#Antara" className="demo-4---footer-link">Antara</a>
-                        <a href="#Sizzle" className="demo-4---footer-link">Sizzle</a>
-                        <NavLink to="../privacy" className="demo-4---footer-link">
+                        <a href="../#Home" className="demo-4---footer-link">Home</a>
+                        <a href="../#Antara" className="demo-4---footer-link">Antara</a>
+                        <a href="../#Sizzle" className="demo-4---footer-link">Sizzle</a>
+                        <NavLink to="/privacy" className="demo-4---footer-link" activeClassName='is-active'>
                             Privacy Policy
                         </NavLink>
                     </div>
