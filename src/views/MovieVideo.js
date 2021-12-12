@@ -1,8 +1,23 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
 
 const MovieVideo = () => {
     return (
         <div id="section-2" className="section---light movie section-2 wf-section">
+            <div className="w-layout-grid grid-4">
+                <div>
+                    <a href="https://discord.gg/bcY9thmKy4" target="_blank" className="button-3 mobile w-button" rel="noreferrer"></a>
+                </div>
+                <div>
+                    <a href="https://opensea.io/collection/arabian-camels" target="_blank" className="button-4 mobile w-button" rel="noreferrer"></a>
+                </div>
+                <div>
+                    <a href="https://instagram.com/arabiancamelsnft" target="_blank" className="button-5 mobile w-button" rel="noreferrer"></a>
+                </div>
+                <div>
+                    <a href="https://twitter.com/ArabianCamels" target="_blank" className="button-6 mobile w-button" rel="noreferrer"></a>
+                </div>
+            </div>
             <h1 id="Sizzle" className="style-2---h1 sizzle">MOVIE&nbsp;NFT VIDEO</h1>
             <h1 className="style-2---h1 sizzle mobile">MOVIE&nbsp;NFT VIDEO</h1>
             <div className="container yt">

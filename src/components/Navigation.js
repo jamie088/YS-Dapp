@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, {useEffect} from "react";
 import { useWallet } from "use-wallet";
+import { NavLink } from "react-router-dom";
 import { getWalletAddressEllipsis } from "../constants/constant";
 
 const Navigation = () => {
@@ -18,16 +19,16 @@ const Navigation = () => {
     return (
         <nav role="navigation" className="nav-menu w-nav-menu">
             <div className="demo-4---nav-links-wrapper">
-                <a href="#Home" className="nav-dropdown---demo-4 w--current">
+                <a href="../#Home" className="nav-dropdown---demo-4 w--current">
           Home
                 </a>
-                <a href="#Presale" className="nav-dropdown---demo-4">
+                <a href="../#Presale" className="nav-dropdown---demo-4">
           Presale
                 </a>
-                <a href="#WhiteList " className="nav-dropdown---demo-4">
+                <a href="../#WhiteList " className="nav-dropdown---demo-4">
           Whitelist
                 </a>
-                <a href="#Antara" className="nav-dropdown---demo-4">
+                <a href="../#Antara" className="nav-dropdown---demo-4">
           Antara
                 </a>
                 <a

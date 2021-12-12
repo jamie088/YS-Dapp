@@ -52,4 +52,4 @@ export const CARD_STRENGTH_MULTIPLIER = 100;
 
 export const getGasFee = (gasPrice) => {
     return Math.round(gasPrice * GAS_PRICE_MULTIPLIER);
-}
+};

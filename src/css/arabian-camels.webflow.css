@@ -7841,7 +7841,7 @@ blockquote {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
+  width: 520px;
   margin-right: auto;
   margin-left: auto;
   -webkit-box-orient: horizontal;
@@ -13810,7 +13810,7 @@ blockquote {
   }
 
   .section---light {
-    padding-top: 60px;
+    padding-top: 10px;
     padding-bottom: 60px;
   }
 
@@ -15650,7 +15650,7 @@ blockquote {
   .section---light.demo-4---home-hero {
     position: static;
     height: auto;
-    padding-top: 60px;
+    padding-top: 20px;
   }
 
   .section---light.demo-4---home-hero.section-1 {
@@ -15813,7 +15813,7 @@ blockquote {
     display: -ms-flexbox;
     display: flex;
     margin-top: auto;
-    padding-top: 20px;
+    padding-top: 80px;
     font-family: Sourcesanspro, sans-serif;
   }
 
@@ -17632,4 +17632,8 @@ blockquote {
 }
 .section-4 {
   scroll-snap-align: start;
+}
+
+.container-footer {
+  width: 100%;
 }
