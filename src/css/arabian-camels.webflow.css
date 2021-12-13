@@ -15800,7 +15800,7 @@ blockquote {
   .style-2---h1.antara.mobile {
     display: flex;
     padding: 0px;
-    margin-bottom: 20px;
+    margin-top: 100px;
     font-family: Sourcesanspro, sans-serif;
   }
 
@@ -17630,6 +17630,6 @@ blockquote {
 }
 @media screen and (max-width: 479px) {
   .antara-video {
-    margin: 120px auto auto !important;
+    margin: 40px auto auto !important;
   }
 }
