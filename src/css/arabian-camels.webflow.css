@@ -4975,10 +4975,7 @@ blockquote {
 
 .section---light.movie {
   position: static;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   /* min-height: 100vh; */
   margin-top: auto;
   -webkit-box-orient: vertical;
@@ -13162,10 +13159,8 @@ blockquote {
   }
 
   .grid-4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
+    justify-content: center;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto;
