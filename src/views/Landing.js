@@ -6,12 +6,12 @@ import {
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./Home";
-import Antara from "./Antara";
+import Sizzle from "./Sizzle";
 import Presale from "./Presale";
 import EmailPage from "./EmailPage";
 import { StartNft, Paused } from "../actions";
 import { nftContract } from "../contracts/contract";
-import MovieVideo from "./MovieVideo";
+import Antara from "./Antara";
 import Footer from "../components/Footer";
 import Contact from "./Contact";
 import Header from '../components/Header';
@@ -60,8 +60,8 @@ const Landing = () => {
                 <div className="html-embed-2 w-embed">
                 </div>
                 <Home isPresale={isPresale}/>
-                <MovieVideo />
                 <Antara />
+                <Sizzle />
                 {isPresale && <Presale />}
                 <Contact />
                 <EmailPage />
