@@ -15803,12 +15803,9 @@ blockquote {
   }
 
   .style-2---h1.sizzle.mobile {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     margin-top: auto;
-    padding-top: 80px;
+    padding-top: 40px;
     font-family: Sourcesanspro, sans-serif;
   }
 
@@ -17001,9 +16998,9 @@ blockquote {
     align-self: center;
   }
 
-  .grid-4 {
+  /* .grid-4 {
     margin-top: 40px;
-  }
+  } */
 
   .bold-text-2 {
     max-height: 65px;
