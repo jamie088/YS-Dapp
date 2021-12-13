@@ -4846,7 +4846,7 @@ blockquote {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 124px 6%;
+  padding: 50px 6%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5152,7 +5152,7 @@ blockquote {
   font-weight: 700;
 }
 
-.style-2---h1.sizzle {
+.style-2---h1.antara {
   overflow: visible;
   margin-top: auto;
   background-color: transparent;
@@ -5161,11 +5161,11 @@ blockquote {
   text-align: center;
 }
 
-.style-2---h1.sizzle.mobile {
+.style-2---h1.antara.mobile {
   display: none;
 }
 
-.style-2---h1.antara {
+.style-2---h1.sizzle {
   font-family: Sourcesanspro, sans-serif;
   text-align: center;
 }
@@ -11777,14 +11777,14 @@ blockquote {
     text-align: center;
   }
 
-  .style-2---h1.sizzle {
+  .style-2---h1.antara {
     display: block;
     width: auto;
     padding-bottom: 20px;
     text-align: center;
   }
 
-  .style-2---h1.antara {
+  .style-2---h1.sizzle {
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 20px;
@@ -13886,7 +13886,7 @@ blockquote {
     line-height: 56px;
   }
 
-  .style-2---h1.sizzle {
+  .style-2---h1.antara {
     margin-top: auto;
   }
 
@@ -15697,7 +15697,7 @@ blockquote {
 
   .section---light.movie.nftform {
     margin-top: auto;
-    padding-top: 60px;
+    padding-top: 40px;
   }
 
   .section---light.movie.nftform.section-3 {
@@ -15795,21 +15795,21 @@ blockquote {
     line-height: 48px;
   }
 
-  .style-2---h1.sizzle {
+  .style-2---h1.antara {
     display: none;
     overflow: visible;
     -o-object-fit: fill;
     object-fit: fill;
   }
 
-  .style-2---h1.sizzle.mobile {
+  .style-2---h1.antara.mobile {
     display: flex;
     margin-top: auto;
     padding-top: 40px;
     font-family: Sourcesanspro, sans-serif;
   }
 
-  .style-2---h1.antara {
+  .style-2---h1.sizzle {
     font-family: Horizon;
   }
 

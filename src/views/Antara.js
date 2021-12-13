@@ -5,7 +5,7 @@ const Antara = () => {
     return (
         <div id="section-2" className="section---light movie section-2 wf-section">
             <h1 id="Antara" className="style-2---h1 antara">MOVIE&nbsp;NFT VIDEO</h1>
-            <h1 className="style-2---h1 sizzle mobile">MOVIE&nbsp;NFT VIDEO</h1>
+            <h1 className="style-2---h1 antara mobile">MOVIE&nbsp;NFT VIDEO</h1>
             <div className="w-layout-grid grid-4">
                 <div>
                     <a href="https://discord.gg/bcY9thmKy4" target="_blank" className="button-3 mobile w-button" rel="noreferrer"></a>
