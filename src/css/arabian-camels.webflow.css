@@ -8115,9 +8115,6 @@ blockquote {
   top: 0px;
   right: 0px;
   z-index: 100;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   min-height: auto;
@@ -10001,7 +9998,8 @@ blockquote {
 
 .scroll-snap-wrapper {
   position: relative;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 100vw;
   height: calc(100vh - 14.9vh);
   -o-object-fit: fill;
@@ -10010,7 +10008,7 @@ blockquote {
 
 @media screen and (max-width: 991px) {
   .scroll-snap-wrapper {
-    height: 100vh;
+    height: calc(100vh - 125px);
   }
 }
 
@@ -12818,9 +12816,6 @@ blockquote {
   }
 
   .navbar---demo-4 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 20px 3% 0px;
     -webkit-box-pack: center;
@@ -13324,7 +13319,7 @@ blockquote {
   .container.footer {
     width: 100%;
     margin-top: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
   }
 
   .container.header-text {
@@ -15134,7 +15129,7 @@ blockquote {
     margin-top: 10px;
     /* margin-bottom: 220px; */
     margin-left: auto;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
   }
 
   .container.header-text {
@@ -16548,6 +16543,7 @@ blockquote {
   .navbar---demo-4 {
     height: 125px;
     padding: 0px 20px;
+    overflow: hidden;
   }
 
   .demo-4---menu-links {
