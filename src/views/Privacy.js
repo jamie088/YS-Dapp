@@ -2,7 +2,7 @@ import React from 'react';
 
 const Privacy = () => {
     return (
-        <div className="wf-section">
+        <div className="wf-section-privacy">
             <div>
                 <h1 className="heading-5">Privacy Policy</h1>
                 <p className="paragraph-5" style={{textAlign: "center"}}>

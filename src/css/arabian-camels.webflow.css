@@ -17625,3 +17625,6 @@ blockquote {
 .container-footer {
   width: 100%;
 }
+.wf-section-privacy {
+  padding: 0 6px;
+}
