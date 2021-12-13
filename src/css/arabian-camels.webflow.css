@@ -15799,8 +15799,8 @@ blockquote {
 
   .style-2---h1.antara.mobile {
     display: flex;
-    margin-top: auto;
-    padding-top: 40px;
+    padding: 0px;
+    margin-bottom: 20px;
     font-family: Sourcesanspro, sans-serif;
   }
 
@@ -17627,4 +17627,9 @@ blockquote {
 }
 .wf-section-privacy {
   padding: 0 6px;
+}
+@media screen and (max-width: 479px) {
+  .antara-video {
+    margin: 120px auto auto !important;
+  }
 }
