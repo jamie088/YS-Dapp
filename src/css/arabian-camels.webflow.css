@@ -10359,7 +10359,7 @@ blockquote {
 
   .style-2---h1 {
     font-size: 80px;
-    line-height: 94px;
+    /* line-height: 94px; */
   }
 
   ._50-percent-block {
