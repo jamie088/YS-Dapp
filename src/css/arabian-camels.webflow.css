@@ -4846,7 +4846,7 @@ blockquote {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px 6%;
+  padding: 50px 10%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -8119,7 +8119,7 @@ blockquote {
   width: 100%;
   min-height: auto;
   margin-top: 0px;
-  padding: 0px 6%;
+  padding: 0px 10%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -17637,5 +17637,9 @@ blockquote {
   .h1-welcome {
     margin-top: 0;
     font-size: 60px;
+  }
+  .paragraph-4-coming {
+    margin-left: 40px;
+    font-size: 28px;
   }
 }
