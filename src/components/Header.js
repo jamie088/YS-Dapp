@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/WEBSITE-HEADER_BLACK-p-1080.png';
+import logo from '../images/WEBSITE HEADER_black_flip.png';
 
 const Header = () => {
     return (

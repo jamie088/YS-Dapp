@@ -17639,7 +17639,8 @@ blockquote {
     font-size: 60px;
   }
   .paragraph-4-coming {
-    margin-left: 40px;
+    /* margin-left: 40px; */
+    text-align: center;
     font-size: 28px;
   }
 }
