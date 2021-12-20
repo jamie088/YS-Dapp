@@ -5169,6 +5169,10 @@ blockquote {
   font-family: Sourcesanspro, sans-serif;
   text-align: center;
 }
+.style-2---h1.road-map {
+  font-family: Sourcesanspro, sans-serif;
+  text-align: center;
+}
 
 .demo-2---home-hero-image {
   position: absolute;
@@ -17566,7 +17570,7 @@ blockquote {
   bottom: -125px;
   z-index: 1;
   width: 680px;
-  height: 600px;
+  height: 640px;
   margin-right: 0;
   margin-left: 0;
   clear: both;
@@ -17614,6 +17618,9 @@ blockquote {
 }
 #Sizzle {
     scroll-snap-align: start;
+}
+#RoadMap {
+  scroll-snap-align: start;
 }
 #Presale {
     scroll-snap-align: start;

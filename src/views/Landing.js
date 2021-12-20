@@ -12,6 +12,7 @@ import EmailPage from "./EmailPage";
 import { StartNft, Paused } from "../actions";
 import { nftContract } from "../contracts/contract";
 import Antara from "./Antara";
+import RoadMap from "./RoadMap";
 import Footer from "../components/Footer";
 import Contact from "./Contact";
 import Header from '../components/Header';
@@ -62,6 +63,7 @@ const Landing = () => {
                 <Home isPresale={isPresale}/>
                 <Antara />
                 <Sizzle />
+                <RoadMap />
                 {isPresale && <Presale />}
                 <Contact />
                 <EmailPage />

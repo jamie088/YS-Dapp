@@ -1,15 +1,20 @@
 /* eslint-disable class-methods-use-this */
-import React, {Component} from 'react';
+import React, { Component, useState } from 'react';
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
-// const EmailPage = () => {
-class EmailPage extends Component{
-    // const emailSubscriptions = (e) => {
+const EmailPage = () => {
+    const [email, setEmail] = useState();
+    const handleChangeEmail = (e) => {
+        setEmail(e);
+    };
+    const emailSubscriptions = (e) => {
     //     e.preventDefault();
-    emailSubscriptions(e) {
         e.preventDefault();
-
+        if (!email) {
+            toast.error(`Please input the correct email address`);
+            return;
+        }
         emailjs
             .sendForm(
                 "service_8lyyhe9", // process.env.EMAILJS_SERVICE_ID,
@@ -28,23 +33,24 @@ class EmailPage extends Component{
                 }
             );
         e.target.reset();
+        setEmail();
     };
 
-    render() {
-        return (
-            <form className="email-contact-form" onSubmit={this.emailSubscriptions}>
-                {/* <h3>Join our email list for future updates.</h3> */}
-                <input
-                    className="input-default"
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email here..."
-                    style={{minWidth: "325px"}}
-                />
-                <input type="submit" value="Subscribe" className="button w-button" style={{margin: "10px"}}/>
-            </form>
-        );
-    }
+    return (
+        <form className="email-contact-form" onSubmit={(e) => emailSubscriptions(e)}>
+            {/* <h3>Join our email list for future updates.</h3> */}
+            <input
+                className="input-default"
+                type="email"
+                name="email"
+                value={email}
+                onChange={(e) => handleChangeEmail(e.target.value)}
+                placeholder="Enter your email here..."
+                style={{minWidth: "325px"}}
+            />
+            <input type="submit" value="Subscribe" className="button w-button" style={{margin: "10px"}}/>
+        </form>
+    );
 };
 
 export default EmailPage;
