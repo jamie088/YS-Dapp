@@ -15,12 +15,13 @@ const EmailPage = () => {
             toast.error(`Please input the correct email address`);
             return;
         }
+        console.log('---------------', process.env.EMAILJS_SERVICE_ID);
         emailjs
             .sendForm(
-                "service_8lyyhe9", // process.env.EMAILJS_SERVICE_ID,
-                "template_xzq4udf", // process.env.EMAILJS_TEMPLATE_ID,
+                "service_ddfm6tp", // process.env.EMAILJS_SERVICE_ID,
+                "template_yiwstqn", // process.env.EMAILJS_TEMPLATE_ID,
                 e.target,
-                "user_MLvqbPBCXZepDVYse9qUb", // process.env.EMAILJS_USER_ID
+                "user_wh2bsD3TedHThkU8puzW9", // process.env.EMAILJS_USER_ID
             )
             .then(
                 (result) => {
