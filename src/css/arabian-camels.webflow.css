@@ -4974,10 +4974,6 @@ blockquote {
   display: block;
   /* min-height: 100vh; */
   margin-top: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   background-color: transparent;
 }
@@ -4985,18 +4981,26 @@ blockquote {
 .section---light.movie.nftform {
   display: block;
   padding-top: 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.section---light.about {
+  position: static;
+  display: block;
+  /* min-height: 100vh; */
+  margin-top: auto;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.section---light.about.nftform {
+  display: block;
+  padding-top: 20px;
   flex-direction: column;
 }
 
 .social-media-links {
   position: static;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -5169,7 +5173,10 @@ blockquote {
   font-family: Sourcesanspro, sans-serif;
   text-align: center;
 }
-
+.style-2---h1.about {
+  font-family: Sourcesanspro, sans-serif;
+  text-align: center;
+}
 .demo-2---home-hero-image {
   position: absolute;
   left: 0%;
@@ -11716,6 +11723,23 @@ blockquote {
     text-align: left;
   }
 
+  .section---light.about {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://uploads-ssl.webflow.com/61a006aa4d4109ece6043c1a/61a8708b98d7a17597bdaa00_web%20background%20(2).png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .section---light.about.nftform {
+    background-image: url("https://uploads-ssl.webflow.com/61a006aa4d4109ece6043c1a/61a8708b98d7a17597bdaa00_web%20background%20(2).png");
+  }
+
+  .section---light.about.nftform.section-3 {
+    text-align: left;
+  }
+
   .social-media-links {
     display: none;
   }
@@ -14564,8 +14588,6 @@ blockquote {
 
   .demo-4---tablet-mobile-menu {
     margin-top: 74px;
-    -webkit-transform: translate(-100%, 0px);
-    -ms-transform: translate(-100%, 0px);
     transform: translate(-100%, 0px);
   }
 
@@ -15674,22 +15696,31 @@ blockquote {
 
   .section---light.movie.nftform.section-3 {
     display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 
   .section---light.movie.section-2 {
+    display: block;
+  }
+
+  .section---light.about {
+    margin: auto;
+  }
+
+  .section---light.about.nftform {
+    margin-top: auto;
+  }
+
+  .section---light.about.nftform.section-3 {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section---light.about.section-2 {
     display: block;
   }
 
@@ -16490,12 +16521,12 @@ blockquote {
   .nav-container {
     padding-top: 16px;
     padding-bottom: 16px;
+    display: flex;
+    justify-content: center;
   }
 
   .demo-4---tablet-mobile-menu {
     margin-top: 62px;
-    -webkit-transform: translate(-100%, 0px);
-    -ms-transform: translate(-100%, 0px);
     transform: translate(-100%, 0px);
   }
 
@@ -17577,6 +17608,9 @@ blockquote {
 #RoadMap {
   scroll-snap-align: start;
 }
+#About {
+  scroll-snap-align: start;
+}
 #Presale {
     scroll-snap-align: start;
 }
@@ -17604,5 +17638,11 @@ blockquote {
     /* margin-left: 40px; */
     text-align: center;
     font-size: 28px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .paragraph-4.about {
+    line-height: 24px;
+    margin-top: -10px;
   }
 }

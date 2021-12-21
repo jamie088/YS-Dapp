@@ -57,6 +57,8 @@ const Presale = () => {
                 eth
             )).then(() => {
                 setloadingMint(false);
+                setAmount();
+                setEth();
             });
         }
     };
@@ -90,6 +92,7 @@ const Presale = () => {
                 tokenId
             )).then(() => {
                 setloadingBurn(false);
+                setTokenId();
             });
         }
     };
