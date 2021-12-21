@@ -1,20 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, {useEffect} from "react";
+import React from "react";
 import { useWallet } from "use-wallet";
-import { NavLink } from "react-router-dom";
 import { getWalletAddressEllipsis } from "../constants/constant";
 
 const Navigation = () => {
     const { account, connect } = useWallet();
+
     const connectWallet = () => {
         if (!account) {
             connect();
         }
     };
-
-    useEffect(() => {
-        connectWallet();
-    }, [account]);
 
     return (
         <nav role="navigation" className="nav-menu w-nav-menu">
@@ -25,11 +21,14 @@ const Navigation = () => {
                 <a href="../#Presale" className="nav-dropdown---demo-4">
           Presale
                 </a>
-                <a href="../#WhiteList " className="nav-dropdown---demo-4">
+                <a href="../#Home " className="nav-dropdown---demo-4">
           Whitelist
                 </a>
                 <a href="../#Antara" className="nav-dropdown---demo-4">
           Antara
+                </a>
+                <a href="../#RoadMap" className="nav-dropdown---demo-4">
+          Road Map
                 </a>
                 <a
                     href="https://discord.gg/bcY9thmKy4"

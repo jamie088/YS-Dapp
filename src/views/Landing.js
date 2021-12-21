@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
     BrowserRouter as Router
 } from "react-router-dom";
+import { useWallet } from "use-wallet";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./Home";
@@ -13,12 +14,15 @@ import { StartNft, Paused } from "../actions";
 import { nftContract } from "../contracts/contract";
 import Antara from "./Antara";
 import RoadMap from "./RoadMap";
+import About from "./About";
 import Footer from "../components/Footer";
 import Contact from "./Contact";
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 
 const Landing = () => {
+    const { account } = useWallet();
+
     const isStarted = useSelector(state => state.mintNFT.start);
     const isPaused = useSelector(state => state.mintNFT.pause);
     const [isPresale, setIsPresale] = useState(true);
@@ -26,9 +30,11 @@ const Landing = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(StartNft(nftContract));
-        dispatch(Paused(nftContract));
-    }, [dispatch]);
+        if (account) {
+            dispatch(StartNft(nftContract));
+            dispatch(Paused(nftContract));
+        }
+    }, [dispatch, account]);
 
     useEffect(() => {
         const currentTime = new Date().getTime()/1000;
@@ -64,6 +70,7 @@ const Landing = () => {
                 <Antara />
                 <Sizzle />
                 <RoadMap />
+                <About />
                 {isPresale && <Presale />}
                 <Contact />
                 <EmailPage />

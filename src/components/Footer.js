@@ -13,6 +13,7 @@ const Footer = () => {
                         <a href="../#Home" className="demo-4---footer-link">Home</a>
                         <a href="../#section-2" className="demo-4---footer-link">Antara</a>
                         <a href="../#Sizzle" className="demo-4---footer-link">Sizzle</a>
+                        <a href="../#RoadMap" className="demo-4---footer-link">Road Map</a>
                         <NavLink to="/privacy" className="demo-4---footer-link" activeClassName='is-active'>
                             Privacy Policy
                         </NavLink>

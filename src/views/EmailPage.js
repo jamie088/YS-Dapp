@@ -1,21 +1,21 @@
 /* eslint-disable class-methods-use-this */
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
 const EmailPage = () => {
     const [email, setEmail] = useState();
+
     const handleChangeEmail = (e) => {
         setEmail(e);
     };
+
     const emailSubscriptions = (e) => {
-    //     e.preventDefault();
         e.preventDefault();
         if (!email) {
             toast.error(`Please input the correct email address`);
             return;
         }
-        console.log('---------------', process.env.EMAILJS_SERVICE_ID);
         emailjs
             .sendForm(
                 "service_ddfm6tp", // process.env.EMAILJS_SERVICE_ID,
