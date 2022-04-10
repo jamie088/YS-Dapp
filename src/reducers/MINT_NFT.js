@@ -1,15 +1,20 @@
 import {
     MINT_NFT,
-    BURN,
-    START,
-    PAUSE
+    MINT_COST,
+    PAUSED,
+    LIMIT_STATUS,
+    WALLET
 } from '../actions/types';
 
 const initialState = {
-    mintNFT: null,
-    burn: null,
-    start: false,
-    pause: false
+    mintNFT: {
+        result: null,
+        error: null,
+    },
+    mintCost: null,
+    paused: null,
+    limitStatus: null,
+    wallet: null
 };
 
 export default function (state = initialState, action) {
@@ -17,22 +22,27 @@ export default function (state = initialState, action) {
     case MINT_NFT:
         return {
             ...state,
-            mintNFT: action.payload,
+            mintNFT: {result: action.payload.result, error: action.payload.error},
         };
-    case BURN:
+    case MINT_COST:
         return {
             ...state,
-            burn: action.payload,
+            mintCost: action.payload,
         };
-    case START:
+    case PAUSED:
         return {
             ...state,
-            start: action.payload,
+            paused: action.payload,
         };
-    case PAUSE:
+    case LIMIT_STATUS:
         return {
             ...state,
-            pause: action.payload,
+            limitStatus: action.payload
+        };
+    case WALLET:
+        return {
+            ...state,
+            wallet: action.payload
         };
     default:
         return state;

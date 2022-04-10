@@ -1,21 +1,64 @@
-import React from 'react';
-import slider1 from '../images/slider-img.png';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { useWallet } from "use-wallet";
+import { MintNFT, MintCost, Paused, LimitStatus } from "../actions";
+import { nftContract } from '../contracts/contract';
 
-// eslint-disable-next-line react/prop-types
-const Home = ({ isPresale = true }) => {
+const Home = () => {
+    const { account } = useWallet();
+    const dispatch = useDispatch();
+
+    const { mintCost, mintNFT, paused, limitStatus } = useSelector((state) => state.mintNFT);
+    const [loadingMint, setLoadingMint] = useState(false);
+
+    useEffect(() => {
+        dispatch(MintCost(nftContract));
+        dispatch(LimitStatus(nftContract));
+        dispatch(Paused(nftContract));
+    }, [dispatch, account]);
+
+    useEffect(() => {
+        if (mintNFT.result) {
+            toast.success("Success minted!");
+        } else if (mintNFT.result === false) {
+            toast.error(mintNFT.error);
+        }
+    }, [mintNFT]);
+
+    const handleMintNFT = async () => {
+        if (!loadingMint) {
+            if (limitStatus === false) {
+                toast.error('This wallet has exceeded the mint limit.');
+                return;
+            }
+            if (paused === true) {
+                toast.error('Mint is paused.');
+                return;
+            }
+
+            setLoadingMint(true);
+            dispatch(MintNFT(
+                nftContract,
+                mintCost
+            )).then(() => {
+                setLoadingMint(false);
+            });
+        }
+    };
+
     return (
         <section id="Home" className="section---light demo-4---home-hero wf-section">
             <div className='section---light demo-4---home-hero home-section'>
                 <div className="container header-text">
-                    <h1 className="style-2---h1 h1-welcome">Welcome to<br></br>the caravan!</h1>
-                    <p className="paragraph-4" style={{marginBottom: "0", fontSize: "22px"}}>Arabian Camels is the first NFT community to create a Hollywood movie together. Linking movies and gaming with NFTs and DeFi. The first movie in history funded by an NFT</p>
-                    <p className="paragraph-4 text" style={{margin: "0", padding: "0", fontSize: "28px"}}>Owned by everyone.</p>
-                    <p className="paragraph-4 text paragraph-4-coming">-COMING&nbsp;SOON!-<br></br>The Antara Movie NFT<br></br>#TogetherWeRide</p>
-                    {!isPresale && <a href="https://mgu9490eyrw.typeform.com/to/ouxOMiDB" target="_blank" className="button movie w-button" rel="noopener noreferrer" style={{marginTop: "25px", marginBottom: "25px"}}>
-                        WhiteList
-                    </a>}
+                    <button
+                        onClick={(e) => handleMintNFT(e)}
+                        type="button"
+                        className="button mint-btn"
+                    >
+                        <p className='mint-btn-text'>{loadingMint ? "Minting" : "MINT"}</p>
+                    </button>
                 </div>
-                <img className="bg-image" src={slider1} alt=""/>
             </div>
         </section>
     );

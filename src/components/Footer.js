@@ -1,34 +1,33 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import Discord2 from '../images/discord-2.svg';
-import Twitter from '../images/twitter1-p-500.png';
-import Instagram from '../images/2000px-Instagram_simple_icon.svg-p-1600.png';
 
 const Footer = () => {
     return (
         <div className="section---light demo-4---footer section-4 wf-section">
-            <div className="container footer container-footer">
-                <div className="demo-4---footer-links-contain">
-                    <div className="demo-4---footer-link-wrap">
-                        <a href="../#Home" className="demo-4---footer-link">Home</a>
-                        <a href="../#section-2" className="demo-4---footer-link">Antara</a>
-                        <a href="../#Sizzle" className="demo-4---footer-link">Sizzle</a>
-                        <a href="../#RoadMap" className="demo-4---footer-link">Road Map</a>
-                        <NavLink to="/privacy" className="demo-4---footer-link" activeClassName='is-active'>
-                            Privacy Policy
-                        </NavLink>
-                    </div>
-                    <div className="footer-social-wrap demo-4">
-                        <a href="https://discord.gg/bcY9thmKy4" target="_blank" className="social-media-link demo-4 w-inline-block" rel="noreferrer"><img src={Discord2} width="20" alt="" className="image-3"/></a>
-                        <a href="https://twitter.com/ArabianCamels" target="_blank" className="social-media-link demo-4 w-inline-block" rel="noreferrer"><img src={Twitter} width="20" alt=""/></a>
-                        <a href="https://instagram.com/arabiancamelsnft" target="_blank" className="social-media-link demo-4 w-inline-block" rel="noreferrer"><img src={Instagram} width="16" alt=""/></a>
-                    </div>
+            <div className="follow-footer">
+                <p className='footer-header'>Follow Our Twitter To Get The News As Soon As It Breaks And Join Our Discord To Get All The Project News.</p>
+                <div className='space-between'>
+                    <button className='follow-btn'>Follow Twitter</button>
+                    <button className='follow-btn'>Join Discord</button>
+                    <button className='follow-btn'>Follow Instagram</button>
                 </div>
-                <div className="demo-4---copyrights-wrap">
-                    <div className="copyrights-text demo-4">
-                        <a href="#" className="copyrights-link---dark-text">© Copyright 2021 | Arabian Camels</a>
-                    </div>
-                </div>
+                <button className='follow-btn join-allow-list-btn'>Join the Yxung-Sneaks Allow List</button>
+                <p className='footer-text'>YxungTM & Yxung-Sneaks are registered trademarks of Madeium Inc.<br/>Website by <span className='text-underline'>Madeium</span> + <span className='text-underline'>Boarderless Blockchain Alliance</span></p>
+            </div>
+            <div className='join-footer'>
+                <p className='footer-header'>Joint Yxung-Sneaks</p>
+                <a href="##" className='join-footer-community'>Discord</a>
+                <a href="##" className='join-footer-community'>Twitter</a>
+                <a href="##" className='join-footer-community'>Instagram</a>
+                <a href="##" className='join-footer-community'>Madeium</a>
+                <a href="##" className='join-footer-community'>Madeium Twitter</a>
+                <span className='span-underline'/>
+                <NavLink to="../provableFairness" exact className="join-footer-community" activeClassName='is-active'>
+                    Provable Fairness
+                </NavLink>
+                <NavLink to="../privacy" exact className="join-footer-community" activeClassName='is-active'>
+                    Terms & Conditions
+                </NavLink>
             </div>
         </div>
     );

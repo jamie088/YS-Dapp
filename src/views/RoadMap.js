@@ -1,15 +1,46 @@
 import React from "react";
-import roadMapImg from "../images/road_map.png";
+import EmptyPhoto from "../images/image/empty-photo.png";
 
 const RoadMap = () => {
     return (
         <section
             id="RoadMap"
-            className="section---light movie nftform wf-section"
+            className="section---light roadmap-trust-lists wf-section"
         >
-            <h1 className="style-2---h1 road-map">ROAD MAP</h1>
-            <div className="container yt road-map">
-                <img src={roadMapImg} alt=""/>
+            <div className="roadmap-list">
+                <h2 className="roadmap-list--header">Zero Roadmap<br/>Trust.</h2>
+                <div className="roadmap-list--items grid-container">
+                    <div className="roadmap-list--item">
+                        <img src={EmptyPhoto} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>@JRad_Maker</h2>
+                        <p className="roadmap-list--item-text">Aritatquia dolupta eratem volorenisti intia estin etur, quibus ad ut hitem atem.</p>
+                    </div>
+                    <div className="roadmap-list--item">
+                        <img src={EmptyPhoto} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>@seanpaultv</h2>
+                        <p className="roadmap-list--item-text">Aritatquia dolupta eratem volorenisti intia estin etur, quibus ad ut hitem atem.</p>
+                    </div>
+                    <div className="roadmap-list--item">
+                        <img src={EmptyPhoto} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>@gitknocked</h2>
+                        <p className="roadmap-list--item-text">Aritatquia dolupta eratem volorenisti intia estin etur, quibus ad ut hitem atem.</p>
+                    </div>
+                    <div className="roadmap-list--item">
+                        <img src={EmptyPhoto} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>@eitow</h2>
+                        <p className="roadmap-list--item-text">Aritatquia dolupta eratem volorenisti intia estin etur, quibus ad ut hitem atem.</p>
+                    </div>
+                    <div className="roadmap-list--item">
+                        <img src={EmptyPhoto} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>@tylerpenning</h2>
+                        <p className="roadmap-list--item-text">Aritatquia dolupta eratem volorenisti intia estin etur, quibus ad ut hitem atem.</p>
+                    </div>
+                    <div className="roadmap-list--item">
+                        <img src={EmptyPhoto} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>@jacquie_rad</h2>
+                        <p className="roadmap-list--item-text">Aritatquia dolupta eratem volorenisti intia estin etur, quibus ad ut hitem atem.</p>
+                    </div>
+                </div>
             </div>
         </section>
     );

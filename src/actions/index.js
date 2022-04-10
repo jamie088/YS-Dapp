@@ -1,109 +1,71 @@
-import { MINT_NFT, BURN, START, PAUSE } from "./types";
-import { getWeb3, getGasPrice } from '../services/web3';
+import { MINT_NFT, MINT_COST, PAUSED, LIMIT_STATUS, WALLET } from "./types";
+import { getWeb3 } from '../services/web3';
 
+export const WalletAddress = () => async (dispatch) => {
+    try {
+        const web3 = await getWeb3();
+        const account = await web3.eth.getAccounts();
+        dispatch({
+            type: WALLET,
+            payload: account[0],
+        });
+    } catch (error) {
+        console.log('error');
+    }
+}
 export const MintNFT =
-    (contract, amount, eth) => async (dispatch) => {
+    (contract, mintCost) => async (dispatch) => {
         try {
             const web3 = await getWeb3();
-            const Contract = new web3.eth.Contract(contract.abi, contract.address);
-            const value = web3.utils.toWei((eth).toString(), 'ether');
             const account = await web3.eth.getAccounts();
-
-            await Contract.methods.mint(
-                amount
-            )
+            const Contract = new web3.eth.Contract(contract.abi, contract.address);
+            await Contract.methods.mint()
                 .send({
                     from: account[0],
-                    value
+                    value: mintCost
                 });
 
             dispatch({
                 type: MINT_NFT,
-                payload: true,
+                payload: {result: true},
             });
         } catch (error) {
-            console.log('error', error);
+            let errorMsg;
+            if (
+                error.code === 4001 &&
+                error.message.toLowerCase().indexOf("user denied transaction signature") !== -1
+            ) {
+                errorMsg = "You have cancelled transaction";
+            } else {
+                errorMsg = "There was an error!";
+            }
+
             dispatch({
                 type: MINT_NFT,
-                payload: false,
+                payload: { result: false, error: errorMsg },
             });
         }
     };
 
-export const Approve =
-    (contract, address, tokenId) => async () => {
-        try {
-            const web3 = await getWeb3();
-            const Contract = new web3.eth.Contract(contract.abi, contract.address);
-            const account = await web3.eth.getAccounts();
-            const prices = await getGasPrice();
-
-            await Contract.methods
-                .approve(
-                    address,
-                    tokenId
-                )
-                .send({
-                    from: account[0],
-                    gasPrice: web3.utils.toWei(prices.medium.toString(), "gwei")
-                })
-                .then((data) => {
-                    return data;
-                })
-                .catch((error) => {
-                    return error;
-                });
-        } catch (error) {
-            console.log('error', error);
-            window.alert('There was an error!');
-        }
-    };
-
-export const Burn =
-    (contract, tokenId) => async (dispatch) => {
-        try {
-            const web3 = await getWeb3();
-            const Contract = new web3.eth.Contract(contract.abi, contract.address);
-            const account = await web3.eth.getAccounts();
-            await Contract.methods.burn(
-                tokenId
-            )
-                .send({
-                    from: account[0]
-                });
-
-            dispatch({
-                type: BURN,
-                payload: true,
-            });
-        } catch (error) {
-            console.log('error', error);
-            dispatch({
-                type: BURN,
-                payload: false,
-            });
-        }
-    };
-
-export const StartNft =
+export const MintCost =
     (contract) => async (dispatch) => {
         try {
             const web3 = await getWeb3();
             const Contract = new web3.eth.Contract(contract.abi, contract.address);
-            await Contract.methods.startDate()
+            await Contract.methods.mintCost()
                 .call()
                 .then((data) => {
                     dispatch({
-                        type: START,
+                        type: MINT_COST,
                         payload: data,
                     });
                 })
                 .catch((error) => {
-                    console.log('error', error);
+                    console.log('error-1', error);
                     return error;
                 });
         } catch (error) {
-            console.log('error', error);
+            console.log('error-2', error);
             return error;
         }
     };
@@ -113,17 +75,40 @@ export const Paused =
         try {
             const web3 = await getWeb3();
             const Contract = new web3.eth.Contract(contract.abi, contract.address);
-
             await Contract.methods.paused()
                 .call()
                 .then((data) => {
                     dispatch({
-                        type: PAUSE,
+                        type: PAUSED,
                         payload: data,
                     });
                 })
                 .catch((error) => {
                     console.log('error-pause', error);
+                    return error;
+                });
+        } catch (error) {
+            console.log('error', error);
+            return error;
+        }
+    };
+
+export const LimitStatus =
+    (contract) => async (dispatch) => {
+        try {
+            const web3 = await getWeb3();
+            const account = await web3.eth.getAccounts();
+            const Contract = new web3.eth.Contract(contract.abi, contract.address);
+            await Contract.methods.limitStatus(account[0])
+                .call()
+                .then((data) => {
+                    dispatch({
+                        type: LIMIT_STATUS,
+                        payload: data,
+                    });
+                })
+                .catch((error) => {
+                    console.log('error', error);
                     return error;
                 });
         } catch (error) {
