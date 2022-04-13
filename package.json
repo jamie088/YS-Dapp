@@ -4,7 +4,7 @@
     "main": "src/index.js",
     "scripts": {
         "start": "cross-env NODE_ENV=development webpack-dev-server --open",
-        "build": "cross-env NODE_ENV=production webpack"
+        "build": "cross-env NODE_ENV=production --max-old-space-size=4096 webpack"
     },
     "license": "MIT",
     "devDependencies": {
