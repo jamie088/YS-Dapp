@@ -27,12 +27,12 @@ const Routes = () => {
                             )}
                         />
                     ))}
-                    <Route path="/privacy" exact>
+                    {/* <Route path="/privacy" exact>
                         <Privacy />
                     </Route>
                     <Route path="/provableFairness" exact>
                         <ProvableFairness />
-                    </Route>
+                    </Route> */}
                 </Switch>
             </Suspense>
         </BrowserRouter>

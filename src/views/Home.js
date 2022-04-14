@@ -28,6 +28,10 @@ const Home = () => {
 
     const handleMintNFT = async () => {
         if (!loadingMint) {
+            if (!account) {
+                toast.error('Disconnected wallet!');
+                return;
+            }
             if (limitStatus === false) {
                 toast.error('This wallet has exceeded the mint limit.');
                 return;

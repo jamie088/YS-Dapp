@@ -15396,6 +15396,7 @@ blockquote {
   border-radius: 44px;
   background-color: #000000;
   padding: 20px 50px;
+  width: 280px;
 }
 
 .mint-btn-text {
@@ -15623,6 +15624,7 @@ blockquote {
 
   .mint-btn {
     padding: 12px 30px;
+    width: 150px;
   }
 
   .mint-btn-text {
@@ -15683,10 +15685,11 @@ blockquote {
 
   .mint-btn {
     padding: 8px 24px;
+    width: 110px;
   }
 
   .mint-btn-text {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .style-2---h1.welcome {
