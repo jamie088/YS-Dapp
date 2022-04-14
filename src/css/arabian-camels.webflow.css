@@ -2061,7 +2061,8 @@ body {
   line-height: 20px;
   font-weight: 400;
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
 }
 
 h1 {

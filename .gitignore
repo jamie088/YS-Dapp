@@ -56,6 +56,8 @@ typings/
 
 # next.js build output
 .next
+package-lock.json
+yarn.lock
 /build
 /.vscode
 /config
