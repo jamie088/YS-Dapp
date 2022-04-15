@@ -14,7 +14,7 @@ const Routes = () => {
             <Suspense fallback={Loader}>
                 <Switch>
                     <Route path="/" exact component={LandingPage} />
-                    {menuRoutes.map(({ path, component: Component }) => (
+                    {/* {menuRoutes.map(({ path, component: Component }) => (
                         <Route
                             path={path}
                             exact
@@ -26,13 +26,25 @@ const Routes = () => {
                                 </Layout>
                             )}
                         />
-                    ))}
-                    {/* <Route path="/privacy" exact>
-                        <Privacy />
-                    </Route>
-                    <Route path="/provableFairness" exact>
-                        <ProvableFairness />
-                    </Route> */}
+                    ))} */}
+                    <Route path="/privacy" exact 
+                        render={() => (
+                            <Layout>
+                                <>
+                                <Privacy />
+                                </>
+                            </Layout>
+                        )}
+                    />
+                    <Route path="/provableFairness" exact 
+                        render={() => (
+                            <Layout>
+                                <>
+                                <ProvableFairness />
+                                </>
+                            </Layout>
+                        )}
+                    />
                 </Switch>
             </Suspense>
         </BrowserRouter>
