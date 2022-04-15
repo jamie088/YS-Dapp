@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { useWallet } from "use-wallet";
+import { useMetaMask } from "metamask-react";
 import { MintNFT, MintCost, Paused, LimitStatus } from "../actions";
 import { nftContract } from '../contracts/contract';
 
 const Home = () => {
-    const { account } = useWallet();
     const dispatch = useDispatch();
-
+    const { status, account } = useMetaMask();
     const { mintCost, mintNFT, paused, limitStatus } = useSelector((state) => state.mintNFT);
     const [loadingMint, setLoadingMint] = useState(false);
 
     useEffect(() => {
-        dispatch(MintCost(nftContract));
-        dispatch(LimitStatus(nftContract));
-        dispatch(Paused(nftContract));
-    }, [dispatch, account]);
+        if (status === "connected") {
+            dispatch(MintCost(nftContract));
+            dispatch(LimitStatus(nftContract));
+            dispatch(Paused(nftContract));
+        }
+    }, [dispatch, account, status]);
 
     useEffect(() => {
         if (mintNFT.result) {
@@ -28,8 +29,8 @@ const Home = () => {
 
     const handleMintNFT = async () => {
         if (!loadingMint) {
-            if (!account) {
-                toast.error('Disconnected wallet!');
+            if (status !== "connected") {
+                toast.error('Please connect wallet.');
                 return;
             }
             if (limitStatus === false) {

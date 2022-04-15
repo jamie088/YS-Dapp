@@ -2,8 +2,7 @@ import {
     MINT_NFT,
     MINT_COST,
     PAUSED,
-    LIMIT_STATUS,
-    WALLET
+    LIMIT_STATUS
 } from '../actions/types';
 
 const initialState = {
@@ -13,8 +12,7 @@ const initialState = {
     },
     mintCost: null,
     paused: null,
-    limitStatus: null,
-    wallet: null
+    limitStatus: null
 };
 
 export default function (state = initialState, action) {
@@ -38,11 +36,6 @@ export default function (state = initialState, action) {
         return {
             ...state,
             limitStatus: action.payload
-        };
-    case WALLET:
-        return {
-            ...state,
-            wallet: action.payload
         };
     default:
         return state;

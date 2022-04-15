@@ -1,18 +1,6 @@
-import { MINT_NFT, MINT_COST, PAUSED, LIMIT_STATUS, WALLET } from "./types";
+import { MINT_NFT, MINT_COST, PAUSED, LIMIT_STATUS } from "./types";
 import { getWeb3 } from '../services/web3';
 
-export const WalletAddress = () => async (dispatch) => {
-    try {
-        const web3 = await getWeb3();
-        const account = await web3.eth.getAccounts();
-        dispatch({
-            type: WALLET,
-            payload: account[0],
-        });
-    } catch (error) {
-        console.log('error');
-    }
-}
 export const MintNFT =
     (contract, mintCost) => async (dispatch) => {
         try {

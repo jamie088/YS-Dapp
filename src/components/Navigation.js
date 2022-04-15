@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useWallet } from "use-wallet";
-import { getWalletAddressEllipsis } from "../constants/constant";
-import { WalletAddress } from "../actions";
+import { toast } from "react-toastify";
+import { useMetaMask } from "metamask-react";
+import MetaMaskOnboarding from '@metamask/onboarding';
+import { getWalletAddressEllipsis, getNetworkChainId } from "../constants/constant";
 import logo from '../images/image/logo.png';
 
 function getWindowDimensions() {
@@ -29,19 +29,38 @@ function useWindowDimensions() {
 }
 
 const Navigation = () => {
-    const dispatch = useDispatch();
-    const { account, connect } = useWallet();
+    const { status, connect, account, chainId } = useMetaMask();
     const [mobileMenu, setMobileMenu] = useState(false);
-    const { wallet } = useSelector((state) => state.mintNFT);
+    const [buttonText, setButtonText] = useState('Connect Wallet');
+    const onboarding = React.useRef();
 
     useEffect(() => {
-        dispatch(WalletAddress());
+        if (account) {
+            setButtonText(getWalletAddressEllipsis(account));
+        } else if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
+            setButtonText('Install MetaMask');
+        } else {
+            setButtonText('Connect Wallet');
+        }
+    }, [account, MetaMaskOnboarding.isMetaMaskInstalled()]);
+
+    useEffect(() => {
+        if (!onboarding.current) {
+            onboarding.current = new MetaMaskOnboarding();
+        }
     }, []);
 
+    useEffect(() => {
+        if (status === "connected" && chainId && parseInt(chainId, 16) !== getNetworkChainId()) {
+            toast.error('You are connected to an unsupported network.');
+        }
+    }, [chainId, status]);
+
     const connectWallet = () => {
-        if (!account && !wallet) {
+        if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
+            onboarding.current.startOnboarding();
+        } else if (status !== "connected") {
             connect();
-            dispatch(WalletAddress());
         }
     };
 
@@ -86,7 +105,7 @@ const Navigation = () => {
                     type="button"
                     className="button w-button connect-btn"
                 >
-                    {wallet ? getWalletAddressEllipsis(wallet) : 'Connect Wallet'}
+                    {buttonText}
                 </button>
                 {!mobileMenu ?
                     <button className="demo-4---hamburger" onClick={() => setMobileMenu(true)} type="button">
