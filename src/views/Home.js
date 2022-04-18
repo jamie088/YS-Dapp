@@ -47,6 +47,7 @@ const Home = () => {
                 nftContract,
                 mintCost
             )).then(() => {
+                dispatch(LimitStatus(nftContract));
                 setLoadingMint(false);
             });
         }

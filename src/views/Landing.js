@@ -1,5 +1,4 @@
 import React from "react";
-import { ToastContainer } from "react-toastify";
 import Home from "./Home";
 import Slider from "./Slider";
 import Welcome from "./Welcome";
@@ -7,7 +6,6 @@ import Collection from "./Collection";
 import RoadMap from "./RoadMap";
 import Footer from "../components/Footer";
 import Navigation from '../components/Navigation';
-import "react-toastify/dist/ReactToastify.css";
 
 const Landing = () => {
     return (
@@ -25,7 +23,6 @@ const Landing = () => {
                 <Slider />
                 <RoadMap />
                 <Footer />
-                <ToastContainer />
             </div>
         </section>
     );

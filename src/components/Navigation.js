@@ -56,14 +56,6 @@ const Navigation = () => {
         }
     }, [chainId, status]);
 
-    const connectWallet = () => {
-        if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
-            onboarding.current.startOnboarding();
-        } else if (status !== "connected") {
-            connect();
-        }
-    };
-
     const { height, width } = useWindowDimensions();
 
     useEffect(() => {
@@ -73,6 +65,18 @@ const Navigation = () => {
             document.body.style.overflow = "scroll";
         }
     }, [mobileMenu, width]);
+
+    const connectWallet = () => {
+        if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
+            if (width > 768) {
+                onboarding.current.startOnboarding();
+            } else {
+                toast.error('Please use MM browser.');
+            }
+        } else if (status !== "connected") {
+            connect();
+        }
+    };
 
     return (
         <div style={{width: "100%"}}>

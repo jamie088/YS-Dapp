@@ -115,21 +115,36 @@
         "type": "event"
     },
     {
-        "inputs": [],
-        "name": "allowMintDate",
-        "outputs": [
-            { "internalType": "uint256", "name": "", "type": "uint256" }
+        "inputs": [
+            {
+                "internalType": "address[]",
+                "name": "_users",
+                "type": "address[]"
+            }
         ],
-        "stateMutability": "view",
+        "name": "addAllowlistUsers",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
         "inputs": [
-            { "internalType": "uint256", "name": "", "type": "uint256" }
+            {
+                "internalType": "address",
+                "name": "botwallet",
+                "type": "address"
+            }
         ],
-        "name": "allowlistUsers",
+        "name": "addBotWallet",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "allowMintDate",
         "outputs": [
-            { "internalType": "address", "name": "", "type": "address" }
+            { "internalType": "uint256", "name": "", "type": "uint256" }
         ],
         "stateMutability": "view",
         "type": "function"
@@ -177,6 +192,19 @@
         "outputs": [
             { "internalType": "address", "name": "", "type": "address" }
         ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "botwallet",
+                "type": "address"
+            }
+        ],
+        "name": "getBotWalletStatus",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
         "stateMutability": "view",
         "type": "function"
     },
@@ -243,17 +271,6 @@
         "type": "function"
     },
     {
-        "inputs": [
-            { "internalType": "address", "name": "", "type": "address" }
-        ],
-        "name": "mintedNums",
-        "outputs": [
-            { "internalType": "uint256", "name": "", "type": "uint256" }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
         "inputs": [],
         "name": "name",
         "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
@@ -306,6 +323,32 @@
         "type": "function"
     },
     {
+        "inputs": [
+            {
+                "internalType": "address[]",
+                "name": "_users",
+                "type": "address[]"
+            }
+        ],
+        "name": "removeAllowlistUsers",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "botwallet",
+                "type": "address"
+            }
+        ],
+        "name": "removeBotWallet",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "renounceOwnership",
         "outputs": [],
@@ -338,12 +381,12 @@
     {
         "inputs": [
             {
-                "internalType": "address[]",
-                "name": "_users",
-                "type": "address[]"
+                "internalType": "uint256",
+                "name": "_allowMintDate",
+                "type": "uint256"
             }
         ],
-        "name": "setAllowlistUsers",
+        "name": "setAllowMintDate",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -419,6 +462,19 @@
             }
         ],
         "name": "setMintLimit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_publicMintDate",
+                "type": "uint256"
+            }
+        ],
+        "name": "setPublicMintDate",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -563,7 +619,7 @@
         "inputs": [],
         "name": "withdraw",
         "outputs": [],
-        "stateMutability": "payable",
+        "stateMutability": "nonpayable",
         "type": "function"
     }
 ]
