@@ -10,7 +10,7 @@ import Shoes from "../images/image/shoes.png";
 const Collection = () => {
     return (
         <section
-            id="RoadMap"
+            id="Collection"
             className="section---light allow-lists wf-section"
         >
             <div className="allow-list grid-container">
