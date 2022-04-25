@@ -15,6 +15,16 @@
                 "internalType": "uint256",
                 "name": "_teamReserve",
                 "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_allowMintDate",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_publicMintDate",
+                "type": "uint256"
             }
         ],
         "stateMutability": "nonpayable",
@@ -68,6 +78,31 @@
             }
         ],
         "name": "ApprovalForAll",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "minter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "mintDate",
+                "type": "uint256"
+            }
+        ],
+        "name": "Mint",
         "type": "event"
     },
     {
@@ -130,9 +165,9 @@
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "botwallet",
-                "type": "address"
+                "internalType": "address[]",
+                "name": "_botwallet",
+                "type": "address[]"
             }
         ],
         "name": "addBotWallet",
@@ -146,6 +181,15 @@
         "outputs": [
             { "internalType": "uint256", "name": "", "type": "uint256" }
         ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            { "internalType": "address", "name": "", "type": "address" }
+        ],
+        "name": "allowlistUsers",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
         "stateMutability": "view",
         "type": "function"
     },
@@ -186,34 +230,21 @@
     },
     {
         "inputs": [
+            { "internalType": "address", "name": "", "type": "address" }
+        ],
+        "name": "botWallets",
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
             { "internalType": "uint256", "name": "tokenId", "type": "uint256" }
         ],
         "name": "getApproved",
         "outputs": [
             { "internalType": "address", "name": "", "type": "address" }
         ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "botwallet",
-                "type": "address"
-            }
-        ],
-        "name": "getBotWalletStatus",
-        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            { "internalType": "address", "name": "_user", "type": "address" }
-        ],
-        "name": "isAllowListed",
-        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
         "stateMutability": "view",
         "type": "function"
     },
@@ -264,6 +295,35 @@
     {
         "inputs": [],
         "name": "mintLimit",
+        "outputs": [
+            { "internalType": "uint256", "name": "", "type": "uint256" }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_teamWallet",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_teamReserve",
+                "type": "uint256"
+            }
+        ],
+        "name": "mintTeamReserve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            { "internalType": "address", "name": "", "type": "address" }
+        ],
+        "name": "mintedNums",
         "outputs": [
             { "internalType": "uint256", "name": "", "type": "uint256" }
         ],
@@ -338,9 +398,9 @@
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "botwallet",
-                "type": "address"
+                "internalType": "address[]",
+                "name": "_botwallet",
+                "type": "address[]"
             }
         ],
         "name": "removeBotWallet",
@@ -374,19 +434,6 @@
             { "internalType": "bytes", "name": "_data", "type": "bytes" }
         ],
         "name": "safeTransferFrom",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_allowMintDate",
-                "type": "uint256"
-            }
-        ],
-        "name": "setAllowMintDate",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -457,37 +504,16 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_newMintLimit",
+                "name": "_allowMintDate",
                 "type": "uint256"
-            }
-        ],
-        "name": "setMintLimit",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
+            },
             {
                 "internalType": "uint256",
                 "name": "_publicMintDate",
                 "type": "uint256"
             }
         ],
-        "name": "setPublicMintDate",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_newAddress",
-                "type": "address"
-            }
-        ],
-        "name": "setTeamAddress",
+        "name": "setMintDate",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -496,11 +522,11 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_teamReserve",
+                "name": "_newMintLimit",
                 "type": "uint256"
             }
         ],
-        "name": "setTeamReserve",
+        "name": "setMintLimit",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -522,24 +548,6 @@
         "inputs": [],
         "name": "symbol",
         "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "teamReserve",
-        "outputs": [
-            { "internalType": "uint256", "name": "", "type": "uint256" }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "teamWallet",
-        "outputs": [
-            { "internalType": "address", "name": "", "type": "address" }
-        ],
         "stateMutability": "view",
         "type": "function"
     },

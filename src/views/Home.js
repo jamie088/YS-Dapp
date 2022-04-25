@@ -33,12 +33,12 @@ const Home = () => {
                 toast.error('Please connect wallet.');
                 return;
             }
-            if (limitStatus === false) {
-                toast.error('This wallet has exceeded the mint limit.');
-                return;
-            }
             if (paused === true) {
                 toast.error('Mint is paused.');
+                return;
+            }
+            if (limitStatus === false) {
+                toast.error('This wallet has exceeded the mint limit.');
                 return;
             }
 
