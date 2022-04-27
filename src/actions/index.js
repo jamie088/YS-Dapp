@@ -1,5 +1,5 @@
 import { MINT_NFT, MINT_COST, PAUSED, LIMIT_STATUS } from "./types";
-import { getWeb3 } from '../services/web3';
+import { getWeb3, getGasFee } from '../services/web3';
 
 export const MintNFT =
     (contract, mintCost) => async (dispatch) => {
@@ -7,10 +7,14 @@ export const MintNFT =
             const web3 = await getWeb3();
             const account = await web3.eth.getAccounts();
             const Contract = new web3.eth.Contract(contract.abi, contract.address);
+            // const gasLimit = await Contract.methods.mint()
+            //     .estimateGas({ from: account[0], value: mintCost });
+
             await Contract.methods.mint()
                 .send({
                     from: account[0],
-                    value: mintCost
+                    value: mintCost,
+                    // gas: getGasFee(gasLimit),
                 });
 
             dispatch({

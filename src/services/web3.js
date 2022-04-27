@@ -48,7 +48,6 @@ export const getGasPrice = async () => {
 
 // Gas price multiplier
 export const GAS_PRICE_MULTIPLIER = 1.1;
-export const CARD_STRENGTH_MULTIPLIER = 100;
 
 export const getGasFee = (gasPrice) => {
     return Math.round(gasPrice * GAS_PRICE_MULTIPLIER);

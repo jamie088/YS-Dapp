@@ -87,9 +87,9 @@ const Navigation = () => {
                 <div className="temp-div"></div>
                 <nav role="navigation" className="nav-menu w-nav-menu">
                     <div className="demo-4---nav-links-wrapper">
-                        <a href="../#Landing" className="nav-dropdown---demo-4 w--current">
+                        {/* <a href="../#Landing" className="nav-dropdown---demo-4 w--current">
                             origin story
-                        </a>
+                        </a> */}
                         <a href="../#" className="nav-dropdown---demo-4">
                             twitter
                         </a>
@@ -99,9 +99,9 @@ const Navigation = () => {
                         <a href="../#" className="nav-dropdown---demo-4">
                             instagram
                         </a>
-                        <a href="../#RoadMap" className="nav-dropdown---demo-4">
+                        {/* <a href="../#RoadMap" className="nav-dropdown---demo-4">
                             roadmap
-                        </a>
+                        </a> */}
                     </div>
                 </nav>
                 <button
@@ -127,21 +127,21 @@ const Navigation = () => {
             </div>
             {mobileMenu && (
                 <div className="demo-4---nav-links-wrapper-mobile">
-                    <a href="../#Landing" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4 w--current">
+                    {/* <a href="../#Landing" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4 w--current">
                         origin story
-                    </a>
+                    </a> */}
                     <a href="../#" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
                         twitter
                     </a>
-                    <a href="../# " onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
+                    {/* <a href="../# " onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
                         discord
-                    </a>
+                    </a> */}
                     <a href="../#" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
                         instagram
                     </a>
-                    <a href="../#RoadMap" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
+                    {/* <a href="../#RoadMap" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
                         roadmap
-                    </a>
+                    </a> */}
                 </div>
             )}
         </div>

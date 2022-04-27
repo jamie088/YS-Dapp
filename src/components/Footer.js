@@ -15,19 +15,19 @@ const Footer = () => {
                 <p className='footer-text'>YxungTM & Yxung-Sneaks are registered trademarks of Madeium Inc.<br/>Website by <span className='text-underline'>Madeium</span> + <span className='text-underline'>Boarderless Blockchain Alliance</span></p>
             </div>
             <div className='join-footer'>
-                <p className='footer-header'>Joint Yxung-Sneaks</p>
+                <p className='footer-header'>Join Yxung-Sneaks</p>
                 <a href="##" className='join-footer-community'>Discord</a>
                 <a href="##" className='join-footer-community'>Twitter</a>
                 <a href="##" className='join-footer-community'>Instagram</a>
                 <a href="##" className='join-footer-community'>Madeium</a>
                 <a href="##" className='join-footer-community'>Madeium Twitter</a>
-                <span className='span-underline'/>
-                <NavLink to="../provableFairness" exact className="join-footer-community" activeClassName='is-active'>
+                <span className='height-line'/>
+                {/* <NavLink to="../provableFairness" exact className="join-footer-community" activeClassName='is-active'>
                     Provable Fairness
                 </NavLink>
                 <NavLink to="../privacy" exact className="join-footer-community" activeClassName='is-active'>
                     Terms & Conditions
-                </NavLink>
+                </NavLink> */}
             </div>
         </div>
     );

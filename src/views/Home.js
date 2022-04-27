@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useMetaMask } from "metamask-react";
 import { MintNFT, MintCost, Paused, LimitStatus } from "../actions";
 import { nftContract } from '../contracts/contract';
+import yxungSneaks from '../images/image/yxung-sneaks.png';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -54,8 +55,9 @@ const Home = () => {
     };
 
     return (
-        <section id="Home" className="section---light demo-4---home-hero wf-section">
-            <div className='section---light demo-4---home-hero home-section'>
+        <section id="Home" className="section---light section--home wf-section">
+            {/* <img src={yxungSneaks} loading="lazy" alt="" className="yxungSneaks-img" />
+            <div className='section---light section--home home-section'>
                 <div className="container header-text">
                     <button
                         onClick={(e) => handleMintNFT(e)}
@@ -65,6 +67,16 @@ const Home = () => {
                         <p className='mint-btn-text'>{loadingMint ? "Minting" : "MINT"}</p>
                     </button>
                 </div>
+            </div> */}
+            <div className='section--home-light'>
+                <img src={yxungSneaks} loading="lazy" alt="" className="yxungSneaks-img" />
+                <button
+                    onClick={(e) => handleMintNFT(e)}
+                    type="button"
+                    className="button mint-btn"
+                >
+                    <p className='mint-btn-text'>{loadingMint ? "MINTING..." : "MINTING MAY 7"}</p>
+                </button>
             </div>
         </section>
     );
