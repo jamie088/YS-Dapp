@@ -25,8 +25,8 @@ const Footer = () => {
                 <a href="https://discord.gg/eHgFqmm2" target="_blank" rel="noreferrer" className='join-footer-community'>Discord</a>
                 <a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className='join-footer-community'>Twitter</a>
                 <a href="https://www.instagram.com/yxungsneaks/" target="_blank" rel="noreferrer" className='join-footer-community'>Instagram</a>
-                <a href="##" target="_blank" rel="noreferrer" className='join-footer-community'>Madeium</a>
-                <a href="##" target="_blank" rel="noreferrer" className='join-footer-community'>Madeium Twitter</a>
+                <a href="https://www.madeium.com/" target="_blank" rel="noreferrer" className='join-footer-community'>Madeium</a>
+                <a href="https://twitter.com/madeiummade" target="_blank" rel="noreferrer" className='join-footer-community'>Madeium Twitter</a>
                 <span className='height-line'/>
                 {/* <NavLink to="../provableFairness" exact className="join-footer-community" activeClassName='is-active'>
                     Provable Fairness
