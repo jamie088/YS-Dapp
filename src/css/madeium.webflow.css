@@ -14924,6 +14924,9 @@ blockquote {
 
 .collection-list--item {
   margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .collection-list--item-title {
@@ -14969,16 +14972,19 @@ blockquote {
 }
 
 .follow-btn {
-  font-size: 14px;
-  line-height: 28px;
-  color: #000000;
-  font-weight: 400;
-  font-family: DMSans;
   width: 30%;
   border-radius: 10px;
   background-color: #ffffff;
   margin-top: 10px;
   padding: 8px 16px;
+}
+
+.follow-a {
+  font-size: 14px;
+  line-height: 28px;
+  color: #000000;
+  font-weight: 400;
+  font-family: DMSans;
 }
 
 .join-allow-list-btn {

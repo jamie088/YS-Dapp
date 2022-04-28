@@ -90,13 +90,13 @@ const Navigation = () => {
                         {/* <a href="../#Landing" className="nav-dropdown---demo-4 w--current">
                             origin story
                         </a> */}
-                        <a href="../#" className="nav-dropdown---demo-4">
+                        <a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className="nav-dropdown---demo-4">
                             twitter
                         </a>
-                        <a href="../# " className="nav-dropdown---demo-4">
+                        <a href="https://discord.gg/eHgFqmm2" target="_blank" rel="noreferrer" className="nav-dropdown---demo-4">
                             discord
                         </a>
-                        <a href="../#" className="nav-dropdown---demo-4">
+                        <a href="https://www.instagram.com/yxungsneaks/" target="_blank" rel="noreferrer" className="nav-dropdown---demo-4">
                             instagram
                         </a>
                         {/* <a href="../#RoadMap" className="nav-dropdown---demo-4">
@@ -130,13 +130,13 @@ const Navigation = () => {
                     {/* <a href="../#Landing" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4 w--current">
                         origin story
                     </a> */}
-                    <a href="../#" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
+                    <a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className="nav-dropdown---demo-4">
                         twitter
                     </a>
-                    {/* <a href="../# " onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
+                    <a href="https://discord.gg/eHgFqmm2" target="_blank" rel="noreferrer" className="nav-dropdown---demo-4">
                         discord
-                    </a> */}
-                    <a href="../#" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">
+                    </a>
+                    <a href="https://www.instagram.com/yxungsneaks/" target="_blank" rel="noreferrer" className="nav-dropdown---demo-4">
                         instagram
                     </a>
                     {/* <a href="../#RoadMap" onClick={() => setMobileMenu(false)} className="nav-dropdown---demo-4">

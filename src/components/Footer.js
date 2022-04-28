@@ -7,20 +7,26 @@ const Footer = () => {
             <div className="follow-footer">
                 <p className='footer-header'>Follow Our Twitter To Get The News As Soon As It Breaks And Join Our Discord To Get All The Project News.</p>
                 <div className='space-between'>
-                    <button className='follow-btn'>Follow Twitter</button>
-                    <button className='follow-btn'>Join Discord</button>
-                    <button className='follow-btn'>Follow Instagram</button>
+                    <button type="button" className='follow-btn'>
+                        <a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className='follow-a'>Follow Twitter</a>
+                    </button>
+                    <button type="button" className='follow-btn'>
+                        <a href="https://discord.gg/eHgFqmm2" target="_blank" rel="noreferrer" className='follow-a'>Join Discord</a>
+                    </button>
+                    <button type="button" className='follow-btn'>
+                        <a href="https://www.instagram.com/yxungsneaks/" target="_blank" rel="noreferrer" className='follow-a'>Follow Instagram</a>
+                    </button>
                 </div>
-                <button className='follow-btn join-allow-list-btn'>Join the Yxung-Sneaks Allow List</button>
+                <button type="button" className='follow-btn join-allow-list-btn'>Join the Yxung-Sneaks Allow List</button>
                 <p className='footer-text'>YxungTM & Yxung-Sneaks are registered trademarks of Madeium Inc.<br/>Website by <span className='text-underline'>Madeium</span> + <span className='text-underline'>Boarderless Blockchain Alliance</span></p>
             </div>
             <div className='join-footer'>
                 <p className='footer-header'>Join Yxung-Sneaks</p>
-                <a href="##" className='join-footer-community'>Discord</a>
-                <a href="##" className='join-footer-community'>Twitter</a>
-                <a href="##" className='join-footer-community'>Instagram</a>
-                <a href="##" className='join-footer-community'>Madeium</a>
-                <a href="##" className='join-footer-community'>Madeium Twitter</a>
+                <a href="https://discord.gg/eHgFqmm2" target="_blank" rel="noreferrer" className='join-footer-community'>Discord</a>
+                <a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className='join-footer-community'>Twitter</a>
+                <a href="https://www.instagram.com/yxungsneaks/" target="_blank" rel="noreferrer" className='join-footer-community'>Instagram</a>
+                <a href="##" target="_blank" rel="noreferrer" className='join-footer-community'>Madeium</a>
+                <a href="##" target="_blank" rel="noreferrer" className='join-footer-community'>Madeium Twitter</a>
                 <span className='height-line'/>
                 {/* <NavLink to="../provableFairness" exact className="join-footer-community" activeClassName='is-active'>
                     Provable Fairness
