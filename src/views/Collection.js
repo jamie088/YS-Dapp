@@ -5,7 +5,7 @@ import EggNoHed from "../images/image/Egg_NoHed.png";
 import YxSSneakerUtil from "../images/image/YxS_SneakerUtil.png";
 // import StreetwearKid from "../images/image/StreetwearKid_c.png";
 import MadeiumLockup from "../images/image/Madeium_Lockup_.png";
-import Polygon from "../images/image/Polygon.png";
+import Ethereum from "../images/image/ethereum.png";
 import Ellipse from "../images/image/Ellipse.png";
 import Wizard2 from "../images/image/Wizard-2_cc.png";
 import Astronaut3 from "../images/image/Astronaut3_cc.png";
@@ -56,7 +56,7 @@ const Collection = () => {
                     </p>
                 </div>
                 <div className="allow-list--item">
-                    <img src={Polygon} width="220" height="220" alt=""/>
+                    <img src={Ethereum} width="220" height="220" alt=""/>
                     <h2 className="allow-list--item-title" style={{marginTop: '30px'}}>Ethereum</h2>
                     <p className="allow-list--item-text">YxungSneaks is first deploying on Ethereum and will host the NFT mint currencies of Ether, $USD, and APE Coin.</p>
                     <p className="allow-list--item-text">Chainlink’s Live Pricing Feeds provide all the real time updates, connecting smart contracts to IRL market prices of these assets.</p>
