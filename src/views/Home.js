@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+import Modal from 'react-bootstrap/Modal';
+import { Button } from 'react-bootstrap';
 import { useMetaMask } from "metamask-react";
-import { MintNFT, MintCost, Paused, LimitStatus } from "../actions";
+import { MintNFTWithETH, MintNFTWithAPE, MintCost, Paused, LimitStatus } from "../actions";
 import { nftContract } from '../contracts/contract';
 import yxungSneaks from '../images/image/yxung-sneaks.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home = () => {
     const dispatch = useDispatch();
     const { status, account } = useMetaMask();
     const { mintCost, mintNFT, paused, limitStatus } = useSelector((state) => state.mintNFT);
     const [loadingMint, setLoadingMint] = useState(false);
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     useEffect(() => {
         if (status === "connected") {
@@ -28,7 +36,7 @@ const Home = () => {
         }
     }, [mintNFT]);
 
-    const handleMintNFT = async () => {
+    const handleClickModal = async () => {
         if (!loadingMint) {
             if (status !== "connected") {
                 toast.error('Please connect wallet.');
@@ -43,10 +51,32 @@ const Home = () => {
                 return;
             }
 
-            setLoadingMint(true);
-            dispatch(MintNFT(
+            setShow(true);
+            // setLoadingMint(true);
+            // dispatch(MintNFT(
+            //     nftContract,
+            //     mintCost
+            // )).then(() => {
+            //     dispatch(LimitStatus(nftContract));
+            //     setLoadingMint(false);
+            // });
+        }
+    };
+
+    const handleClickMint = async (isETH) => {
+        setShow(false);
+        setLoadingMint(true);
+        if (isETH) {
+            dispatch(MintNFTWithETH(
                 nftContract,
                 mintCost
+            )).then(() => {
+                dispatch(LimitStatus(nftContract));
+                setLoadingMint(false);
+            });
+        } else {
+            dispatch(MintNFTWithAPE(
+                nftContract
             )).then(() => {
                 dispatch(LimitStatus(nftContract));
                 setLoadingMint(false);
@@ -55,30 +85,34 @@ const Home = () => {
     };
 
     return (
-        <section id="Home" className="section---light section--home wf-section">
-            {/* <img src={yxungSneaks} loading="lazy" alt="" className="yxungSneaks-img" />
-            <div className='section---light section--home home-section'>
-                <div className="container header-text">
+        <>
+            <section id="Home" className="section---light section--home wf-section">
+                <div className='section--home-light'>
+                    <img src={yxungSneaks} loading="lazy" alt="" className="yxungSneaks-img" />
                     <button
-                        onClick={(e) => handleMintNFT(e)}
+                        onClick={(e) => handleClickModal(e)}
                         type="button"
                         className="button mint-btn"
                     >
-                        <p className='mint-btn-text'>{loadingMint ? "Minting" : "MINT"}</p>
+                        <p className='mint-btn-text'>{loadingMint ? "MINTING..." : "MINTING MAY 7"}</p>
                     </button>
                 </div>
-            </div> */}
-            <div className='section--home-light'>
-                <img src={yxungSneaks} loading="lazy" alt="" className="yxungSneaks-img" />
-                <button
-                    onClick={(e) => handleMintNFT(e)}
-                    type="button"
-                    className="button mint-btn"
-                >
-                    <p className='mint-btn-text'>{loadingMint ? "MINTING..." : "MINTING MAY 7"}</p>
-                </button>
-            </div>
-        </section>
+            </section>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>MINTING MAY 7</Modal.Title>
+                </Modal.Header>
+                <Modal.Body></Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={() => handleClickMint(true)}>
+            Mint with ETH
+                    </Button>
+                    <Button variant="primary" onClick={() => handleClickMint(false)}>
+            Mint with APE
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
     );
 };
 

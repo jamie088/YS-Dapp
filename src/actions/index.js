@@ -1,16 +1,15 @@
 import { MINT_NFT, MINT_COST, PAUSED, LIMIT_STATUS } from "./types";
 import { getWeb3, getGasFee } from '../services/web3';
+import { APEContract } from "../contracts/contract";
 
-export const MintNFT =
+export const MintNFTWithETH =
     (contract, mintCost) => async (dispatch) => {
         try {
             const web3 = await getWeb3();
             const account = await web3.eth.getAccounts();
             const Contract = new web3.eth.Contract(contract.abi, contract.address);
-            // const gasLimit = await Contract.methods.mint()
-            //     .estimateGas({ from: account[0], value: mintCost });
 
-            await Contract.methods.mint()
+            await Contract.methods.mintWithETH()
                 .send({
                     from: account[0],
                     value: mintCost,
@@ -23,6 +22,51 @@ export const MintNFT =
             });
         } catch (error) {
             let errorMsg;
+            if (
+                error.code === 4001 &&
+                error.message.toLowerCase().indexOf("user denied transaction signature") !== -1
+            ) {
+                errorMsg = "You have cancelled transaction";
+            } else {
+                errorMsg = "There was an error!";
+            }
+
+            dispatch({
+                type: MINT_NFT,
+                payload: { result: false, error: errorMsg },
+            });
+        }
+    };
+
+export const MintNFTWithAPE =
+    (contract, mintCost) => async (dispatch) => {
+        try {
+            const web3 = await getWeb3();
+            const account = await web3.eth.getAccounts();
+            const Contract = new web3.eth.Contract(contract.abi, contract.address);
+            const APETokenContract = await new web3.eth.Contract(APEContract.abi, APEContract.address);
+
+            const allowance = await APETokenContract.methods.allowance(account[0], contract.address).call();
+            console.log('allowance', allowance.toString());
+            const APEAmount = await Contract.methods.getAPEAmount().call();
+            if (allowance < APEAmount) {
+                await APETokenContract.methods.approve(contract.address, APEAmount).send({
+                    from: account[0]
+                });
+            }
+
+            await Contract.methods.mintWithAPE(APEAmount)
+                .send({
+                    from: account[0]
+                });
+
+            dispatch({
+                type: MINT_NFT,
+                payload: {result: true},
+            });
+        } catch (error) {
+            let errorMsg;
+            console.log('error', error);
             if (
                 error.code === 4001 &&
                 error.message.toLowerCase().indexOf("user denied transaction signature") !== -1

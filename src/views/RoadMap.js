@@ -8,6 +8,7 @@ import SeanRademacher from "../images/image/SeanRademacher_Headshot.png";
 import Sumiko from "../images/image/Sumiko.png";
 import Tyler from "../images/image/Tyler_Penning.png";
 import EthPFP from "../images/image/Eth_PFP.png";
+import Borderless from "../images/image/Borderless.png";
 
 const RoadMap = () => {
     return (
@@ -44,13 +45,13 @@ const RoadMap = () => {
                         <p className="roadmap-list--item-text">Blockchain Architect and Consultant with decades developing innovative projects in emerging technologies emphasizing Web3, Metaverse, NFT, and education.</p>
                     </div>
                     <div className="roadmap-list--item">
-                        <img src={EthPFP} width="216" height="216" alt=""/>
+                        <img src={Borderless} width="216" height="216" alt="" style={{borderRadius: "50%"}}/>
                         <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>BORDERLESS BLOCKCHAIN ALLIANCE</h2>
                         <p className="roadmap-list--item-text">Software Development, Smart Contracts, Security Implementation</p>
                         <p className="roadmap-list--item-text">A global community consisting of human talent and other resources that's enabling people to transform their lives by using blockchain technology to build decentralized projects for numerous applications and problem solving.</p>
                     </div>
                     <div className="roadmap-list--item">
-                        <img src={EmptyPhoto} width="216" height="216" alt=""/>
+                        <img src={EthPFP} width="216" height="216" alt=""/>
                         <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>JASON WATKINS</h2>
                         <p className="roadmap-list--item-text">NFT Strategist</p>
                         <p className="roadmap-list--item-text">Jason pilots an 86’ Elder Millennial equipped with bleeding edge Web3 social, market analytics, surveillance, and integration of emerging NFT utility and social trends.</p>
