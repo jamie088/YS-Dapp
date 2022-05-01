@@ -2124,9 +2124,8 @@ p {
 }
 
 a {
-
   transition: all 400ms ease;
-  color: #fff;
+  /* color: #fff; */
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -14326,6 +14325,17 @@ blockquote {
   .heading-5 {
     font-size: 50px;
     line-height: 64px;
+  }
+
+  .roadmap-list--item {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .join-allow-list-btn {
+    text-align: center;
   }
 }
 

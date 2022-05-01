@@ -17,8 +17,8 @@ const Footer = () => {
                         <a href="https://www.instagram.com/yxungsneaks/" target="_blank" rel="noreferrer" className='follow-a'>Follow Instagram</a>
                     </button>
                 </div>
-                <button type="button" className='follow-btn join-allow-list-btn'>Join the Yxung-Sneaks Allow List</button>
-                <p className='footer-text'>YxungTM & Yxung-Sneaks are registered trademarks of Madeium Inc.<br/>Website by <span className='text-underline'>Madeium</span> + <span className='text-underline'>Boarderless Blockchain Alliance</span></p>
+                <button type="button" className='follow-btn join-allow-list-btn'><a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className='follow-a'>Join the Yxung-Sneaks Allow List</a></button>
+                <p className='footer-text'>YxungTM & Yxung-Sneaks are registered trademarks of Madeium Inc.<br/>Website by <a href="https://madeium.com/" target="_blank" rel="noreferrer" className='text-underline'>Madeium</a> + <a href="https://blockei.io/" target="_blank" rel="noreferrer" className='text-underline'>Borderless Blockchain Alliance</a></p>
             </div>
             <div className='join-footer'>
                 <p className='footer-header'>Join Yxung-Sneaks</p>

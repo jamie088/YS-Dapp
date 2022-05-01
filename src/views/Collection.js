@@ -26,7 +26,7 @@ const Collection = () => {
                     <h2 className="allow-list--item-title" style={{marginTop: '30px'}}>3D Avatar NFTs</h2>
                     <p className="allow-list--item-text">Each 6,666 Origin NFTs starts with a fully rigged, head-to-toe 3D Avatar.</p>
                     <p className="allow-list--item-text">Once your YxungSneak is randomly minted via our collab with Chainlink, it will come fully clothed, but only wearing one shoe.</p>
-                    <p className="allow-list--item-text">Upon redeeming your IRL kicks via Madeium.com, your Avatar will be updated with two shoes.</p>
+                    <p className="allow-list--item-text">Upon redeeming your IRL kicks via <a href="https://madeium.com" target="_blank" rel="noreferrer">Madeium.com</a>, your Avatar will be updated with two shoes.</p>
                 </div>
                 <div className="allow-list--item">
                     <img src={YxSCharacterZ} width="220" height="220" alt=""/>
@@ -64,7 +64,7 @@ const Collection = () => {
                 <div className="allow-list--item">
                     <img src={MadeiumLockup} width="220" height="220" alt=""/>
                     <h2 className="allow-list--item-title" style={{marginTop: '30px'}}>NFT Swap Process</h2>
-                    <p className="allow-list--item-text">Updated NFTS: Holders will be able to interact with Madeium.com to order IRL shoes and update their YxungSneak 3D avatar artwork with a pair of sneakers on foot.</p>
+                    <p className="allow-list--item-text">Updated NFTS: Holders will be able to interact with <a href="https://madeium.com" target="_blank" rel="noreferrer">Madeium.com</a> to order IRL shoes and update their YxungSneak 3D avatar artwork with a pair of sneakers on foot.</p>
                     <p className="allow-list--item-text">New NFTs: An additional NFT will be minted to your wallet that governs the IRL pair of shoes. Your kicks are now on-chain and verified authentic.</p>
                 </div>
             </div>

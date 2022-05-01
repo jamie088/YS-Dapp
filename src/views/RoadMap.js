@@ -20,22 +20,16 @@ const RoadMap = () => {
                 <h2 className="roadmap-list--header">No Roadmap.<br/>Just Vibez.</h2>
                 <div className="roadmap-list--items grid-container">
                     <div className="roadmap-list--item">
-                        <img src={Chloe} width="216" height="216" alt=""/>
-                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>CHLOE MACINTOSH</h2>
-                        <p className="roadmap-list--item-text">Social Media Director</p>
-                        <p className="roadmap-list--item-text">A recent college graduate who is passionate about the evolving world of advertising, graphic design, social media, and pop culture.</p>
+                        <img src={JesseRademacher} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>JESSE RADEMACHER</h2>
+                        <p className="roadmap-list--item-text">Chief Executive Officer/Co-founder of Madeium</p>
+                        <p className="roadmap-list--item-text">Spent a decades developing custom brands and product for the world’s top athletes and influencers, including leading Design and Innovation teams for Adidas.</p>
                     </div>
                     <div className="roadmap-list--item">
-                        <img src={Jacki} width="216" height="216" alt=""/>
-                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>JACKI ROACH</h2>
-                        <p className="roadmap-list--item-text">Media Strategy and Promotions</p>
-                        <p className="roadmap-list--item-text">Expert in Blockchain adoption with a focus on NFTs for metaverse media logistics and distribution channels, as well as strategic partnerships and communications.</p>
-                    </div>
-                    <div className="roadmap-list--item">
-                        <img src={Sumiko} width="216" height="216" alt=""/>
-                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>SUMIKO JIVIDEN</h2>
-                        <p className="roadmap-list--item-text">Chief Operating Officer</p>
-                        <p className="roadmap-list--item-text">Operations & Business Development unicorn, championing structuring and scaling up operations for start-ups, bringing new products to market - particularly in e-commerce and blockchain expansion.</p>
+                        <img src={SeanRademacher} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>SEAN RADEMACHER</h2>
+                        <p className="roadmap-list--item-text">Chief Design Officer /Co-founder of Madeium</p>
+                        <p className="roadmap-list--item-text">Over 20 years as founder of Pigment Creative and a Creative Director specializing in Graphics, 3D, Brand, UIUX, Advertising, and Design Direction.</p>
                     </div>
                     <div className="roadmap-list--item">
                         <img src={Lamar} width="216" height="216" alt=""/>
@@ -43,6 +37,12 @@ const RoadMap = () => {
                         <p className="roadmap-list--item-text">Chief Technology Officer</p>
                         <p className="roadmap-list--item-text">NFT Technology & Blockchain Infrastructure</p>
                         <p className="roadmap-list--item-text">Blockchain Architect and Consultant with decades developing innovative projects in emerging technologies emphasizing Web3, Metaverse, NFT, and education.</p>
+                    </div>
+                    <div className="roadmap-list--item">
+                        <img src={Sumiko} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>SUMIKO JIVIDEN</h2>
+                        <p className="roadmap-list--item-text">Chief Operating Officer</p>
+                        <p className="roadmap-list--item-text">Operations & Business Development unicorn, championing structuring and scaling up operations for start-ups, bringing new products to market - particularly in e-commerce and blockchain expansion.</p>
                     </div>
                     <div className="roadmap-list--item">
                         <img src={Borderless} width="216" height="216" alt="" style={{borderRadius: "50%"}}/>
@@ -63,16 +63,16 @@ const RoadMap = () => {
                         <p className="roadmap-list--item-text">Strategic alignment, design, and execution of economic campaigns to drive change via all things Web3.</p>
                     </div>
                     <div className="roadmap-list--item">
-                        <img src={JesseRademacher} width="216" height="216" alt=""/>
-                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>JESSE RADEMACHER</h2>
-                        <p className="roadmap-list--item-text">Chief Executive Officer/Co-founder of Madeium</p>
-                        <p className="roadmap-list--item-text">Spent a decades developing custom brands and product for the world’s top athletes and influencers, including leading Design and Innovation teams for Adidas.</p>
+                        <img src={Jacki} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>JACKI ROACH</h2>
+                        <p className="roadmap-list--item-text">Media Strategy and Promotions</p>
+                        <p className="roadmap-list--item-text">Expert in Blockchain adoption with a focus on NFTs for metaverse media logistics and distribution channels, as well as strategic partnerships and communications.</p>
                     </div>
                     <div className="roadmap-list--item">
-                        <img src={SeanRademacher} width="216" height="216" alt=""/>
-                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>SEAN RADEMACHER</h2>
-                        <p className="roadmap-list--item-text">Chief Design Officer /Co-founder of Madeium</p>
-                        <p className="roadmap-list--item-text">Over 20 years as founder of Pigment Creative and a Creative Director specializing in Graphics, 3D, Brand, UIUX, Advertising, and Design Direction.</p>
+                        <img src={Chloe} width="216" height="216" alt=""/>
+                        <h2 className="roadmap-list--item-title" style={{marginTop: '30px'}}>CHLOE MACINTOSH</h2>
+                        <p className="roadmap-list--item-text">Social Media Director</p>
+                        <p className="roadmap-list--item-text">A recent college graduate who is passionate about the evolving world of advertising, graphic design, social media, and pop culture.</p>
                     </div>
                 </div>
             </div>
