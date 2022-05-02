@@ -6,18 +6,28 @@ const Footer = () => {
         <div className="section---light demo-4---footer section-4 wf-section">
             <div className="follow-footer">
                 <p className='footer-header'>Follow Our Twitter To Get The News As Soon As It Breaks And Join Our Discord To Get All The Project News.</p>
-                <div className='space-between'>
-                    <button type="button" className='follow-btn'>
-                        <a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className='follow-a'>Follow Twitter</a>
-                    </button>
-                    <button type="button" className='follow-btn'>
-                        <a href="https://discord.gg/eHgFqmm2" target="_blank" rel="noreferrer" className='follow-a'>Join Discord</a>
-                    </button>
-                    <button type="button" className='follow-btn'>
-                        <a href="https://www.instagram.com/yxungsneaks/" target="_blank" rel="noreferrer" className='follow-a'>Follow Instagram</a>
-                    </button>
+                <div className='grid-3fr'>
+                    <a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className='follow-a'>
+                        <button type="button" className='follow-btn'>
+                            Follow Twitter
+                        </button>
+                    </a>
+                    <a href="https://discord.gg/eHgFqmm2" target="_blank" rel="noreferrer" className='follow-a'>
+                        <button type="button" className='follow-btn'>
+                            Join Discord
+                        </button>
+                    </a>
+                    <a href="https://www.instagram.com/yxungsneaks/" target="_blank" rel="noreferrer" className='follow-a'>
+                        <button type="button" className='follow-btn'>
+                            Follow Instagram
+                        </button>
+                    </a>
                 </div>
-                <button type="button" className='follow-btn join-allow-list-btn'><a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className='follow-a'>Join the Yxung-Sneaks Allow List</a></button>
+                <a href="https://twitter.com/YxungSneaks" target="_blank" rel="noreferrer" className='follow-a'>
+                    <button type="button" className='follow-btn join-allow-list-btn'>
+                        Join the Yxung-Sneaks Allow List
+                    </button>
+                </a>
                 <p className='footer-text'>YxungTM & Yxung-Sneaks are registered trademarks of Madeium Inc.<br/>Website by <a href="https://madeium.com/" target="_blank" rel="noreferrer" className='text-underline'>Madeium</a> + <a href="https://blockei.io/" target="_blank" rel="noreferrer" className='text-underline'>Borderless Blockchain Alliance</a></p>
             </div>
             <div className='join-footer'>

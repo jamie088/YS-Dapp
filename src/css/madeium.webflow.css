@@ -14102,11 +14102,12 @@ blockquote {
 }
 
 .follow-btn {
-  width: 30%;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
   background-color: #ffffff;
-  margin-top: 10px;
   padding: 8px 16px;
+  /* text-align: start; */
 }
 
 .follow-a {
@@ -14115,6 +14116,7 @@ blockquote {
   color: #000000;
   font-weight: 400;
   font-family: DMSans;
+  /* width: 30%; */
 }
 
 .join-allow-list-btn {
@@ -14123,6 +14125,7 @@ blockquote {
   background-image: linear-gradient(180deg, #ffba00 0%, #ff7600 100%);
   text-align: start;
   padding: 8px 16px;
+  margin-top: 10px;
 }
 
 .footer-text {
@@ -14161,9 +14164,10 @@ blockquote {
   opacity: 0.5;
 }
 
-.space-between {
-  display: flex;
-  justify-content: space-between;
+.grid-3fr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .text-underline {
@@ -14314,12 +14318,12 @@ blockquote {
     display: block;
   }
 
-  .follow-btn {
+  .follow-a {
     width: 100%;
   }
 
-  .space-between {
-    display: block;
+  .grid-3fr {
+    grid-template-columns: 1fr;
   }
 
   .heading-5 {
