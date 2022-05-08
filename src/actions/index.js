@@ -47,7 +47,6 @@ export const MintNFTWithAPE =
             const APETokenContract = await new web3.eth.Contract(APEContract.abi, APEContract.address);
 
             const allowance = await APETokenContract.methods.allowance(account[0], contract.address).call();
-            console.log('allowance', allowance.toString());
             const APEAmount = await Contract.methods.getAPEAmount().call();
             if (allowance < APEAmount) {
                 await APETokenContract.methods.approve(contract.address, APEAmount).send({
@@ -66,7 +65,6 @@ export const MintNFTWithAPE =
             });
         } catch (error) {
             let errorMsg;
-            console.log('error', error);
             if (
                 error.code === 4001 &&
                 error.message.toLowerCase().indexOf("user denied transaction signature") !== -1

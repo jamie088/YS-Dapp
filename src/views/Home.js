@@ -90,11 +90,13 @@ const Home = () => {
                 <div className='section--home-light'>
                     <img src={yxungSneaks} loading="lazy" alt="" className="yxungSneaks-img" />
                     <button
-                        onClick={(e) => handleClickModal(e)}
+                        // onClick={(e) => handleClickModal(e)}
+                        style={{cursor: "not-allowed"}}
                         type="button"
                         className="button mint-btn"
                     >
-                        <p className='mint-btn-text'>{loadingMint ? "MINTING..." : "MINTING MAY 7"}</p>
+                        {/* <p className='mint-btn-text'>{loadingMint ? "MINTING..." : "MINTING MAY 7"}</p> */}
+                        <p className='mint-btn-text'>Mint not Open</p>
                     </button>
                 </div>
             </section>

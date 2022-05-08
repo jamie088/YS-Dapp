@@ -110,7 +110,7 @@ const Collection = () => {
                         <button
                             type="button"
                             className="button w-button proto-btn proto-003"
-                        >
+                        > 
                             Proto 003
                         </button>
                         <img src={ShoesClaim2} width="252" height="138" alt="" style={{margin: "53px 0"}}/>
