@@ -6,6 +6,7 @@ import Layout from "../layout/Layout";
 import LandingPage from "../views/Landing";
 import Privacy from "../views/Privacy";
 import ProvableFairness from "../views/ProvableFairness";
+import Terms from "../views/Terms";
 import {menuRoutes} from "./index";
 
 const Routes = () => {
@@ -14,7 +15,7 @@ const Routes = () => {
             <Suspense fallback={Loader}>
                 <Switch>
                     <Route path="/" exact component={LandingPage} />
-                    {/* {menuRoutes.map(({ path, component: Component }) => (
+                    {menuRoutes.map(({ path, component: Component }) => (
                         <Route
                             path={path}
                             exact
@@ -26,8 +27,8 @@ const Routes = () => {
                                 </Layout>
                             )}
                         />
-                    ))} */}
-                    <Route path="/privacy" exact 
+                    ))}
+                    {/* <Route path="/privacy" exact 
                         render={() => (
                             <Layout>
                                 <>
@@ -41,6 +42,15 @@ const Routes = () => {
                             <Layout>
                                 <>
                                 <ProvableFairness />
+                                </>
+                            </Layout>
+                        )}
+                    /> */}
+                    <Route path="/terms" exact 
+                        render={() => (
+                            <Layout>
+                                <>
+                                <Terms />
                                 </>
                             </Layout>
                         )}

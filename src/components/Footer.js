@@ -44,6 +44,9 @@ const Footer = () => {
                 <NavLink to="../privacy" exact className="join-footer-community" activeClassName='is-active'>
                     Terms & Conditions
                 </NavLink> */}
+                <NavLink to="../terms" exact className="join-footer-community" activeClassName='is-active'>
+                    Terms of Use
+                </NavLink>
             </div>
         </div>
     );
