@@ -44,7 +44,7 @@ const Footer = () => {
                 <NavLink to="../privacy" exact className="join-footer-community" activeClassName='is-active'>
                     Terms & Conditions
                 </NavLink> */}
-                <a href="https://www.iubenda.com/privacy-policy/75098772" target="_blank" rel="noreferrer" className='join-footer-community'>Privacy Policy</a>
+                <a href="https://www.madeium.com/terms/cookie-policy" target="_blank" rel="noreferrer" className='join-footer-community'>Privacy Policy</a>
                 <NavLink to="../terms" exact className="join-footer-community" activeClassName='is-active'>
                     Terms of Use
                 </NavLink>
