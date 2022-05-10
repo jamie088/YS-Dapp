@@ -81,7 +81,7 @@ const Navigation = () => {
     return (
         <div style={{width: "100%"}}>
             <div className="nav-container">
-                <a href='../#Home'>
+                <a href='../#'>
                     <img src={logo} loading="lazy" alt="" className="logo-img" />
                 </a>
                 <div className="temp-div"></div>
